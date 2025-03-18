@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+.company-name{
+    text-align: center;
+}
+.invoice-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+    padding: 40px;
+}
+.head-logo{
+   border: 2px black solid;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 10px;
+   width: 65%;
+}
+.description{
+  border-bottom: 2px solid black;
+}
+.date-issued{
+   display: flex;
+   justify-content: space-between;
+   gap: 15.5rem;
+}
+.customer{
+  width: 450px;
+}
+.totaled{
+  transform: translate(167%,0%);
+}

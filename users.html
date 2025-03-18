@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Page</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Css/user.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined" id="openBar">menu</span>
+        </div>
+        <h2 class="header-left">
+           Ochioso Global Link
+        </h2>
+        <div class="header-right">
+          <a href="users.html">
+            <i class="fa-solid fa-circle-user" id="main-user"></i>
+           </a>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="external">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">inventory</span> Admin Panel
+          </div>
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()" id="openBar">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="index.html">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="#">  <i class="fa-solid fa-user"></i> User Management</a></li>
+          </li>
+          
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="product.html">
+              <span class="material-icons-outlined">inventory_2</span> Products
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="inventory.html">
+              <span class="material-icons-outlined">fact_check</span> Inventory
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="purchase.html">
+              <span class="material-icons-outlined">add_shopping_cart</span> Purchase Stock
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="sales.html">
+              <span class="material-icons-outlined">shopping_cart</span> Sales Orders
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="alert.html">
+              <span class="material-icons-outlined">poll</span> Inventory Alerts
+            </a>
+          </li>
+         
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="user-container">
+          <div class="user-content">
+            <i class="fa-solid fa-user-tie"></i>
+            <h3 style="color: black;">User Name</h3>
+            <h5 style="color: black;">User Position</h5>
+          </div>
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="Js/user.js"></script>
+  </body>
+</html>

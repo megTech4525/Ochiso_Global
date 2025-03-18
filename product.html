@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Product Page</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Css/product.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined" id="openBar">menu</span>
+        </div>
+        <h2 class="header-left">
+           Ochioso Global Link
+        </h2>
+        <div class="header-right">
+          <a href="users.html">
+            <i class="fa-solid fa-circle-user" id="main-user"></i>
+           </a>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="external">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">inventory</span> Admin Panel
+          </div>
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()" id="openBar">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="index.html">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="users.html">  <i class="fa-solid fa-user"></i> User Management</a></li>
+          </li>
+          
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="#">
+              <span class="material-icons-outlined">inventory_2</span> Products
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="inventory.html">
+              <span class="material-icons-outlined">fact_check</span> Inventory
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="purchase.html">
+              <span class="material-icons-outlined">add_shopping_cart</span> Purchase Stock
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="sales.html">
+              <span class="material-icons-outlined">shopping_cart</span> Sales Orders
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="alert.html">
+              <span class="material-icons-outlined">poll</span> Inventory Alerts
+            </a>
+          </li>
+         
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+        <!-- Product Table -->
+        <main class="main-container">
+           <div class="product-container">
+            <!-- Add Products Section -->
+            <div class="add-container">
+              <div class="top-head-1">
+                <h3><i class="fa-solid fa-cart-plus"></i> Add Products</h3>
+               </div>
+               <div class="add-content">
+                <h4>Register New Product Here</h4>
+                 <button class="add-new" onclick="newProductOpen()">+ Add New Product</button>
+               </div>
+               <!-- Pop up for adding New product -->
+               <div class="pop">
+                <div class="newProduct-container">
+           <div class="addNew-popup" id="newProduct-popup">
+               <form action=""> 
+                <i class="fa-solid fa-xmark" onclick="newProductClose()"></i>
+                <h4 style="text-align: center;">New Product</h4>
+                 <input class="new-input" type="text"  placeholder="Product Name"><br><br>
+                 <input class="new-input" type="text" name="" id="" placeholder="Categories"><br><br>
+                 <input class="new-input" type="number" name="" id="" placeholder="Product Quantity"><br><br>
+                 <input class="new-input" type="number" name="" id="" placeholder="Cost Price"><br><br>
+                 <input class="new-input" type="number" name="" id="" placeholder="Selling Price"><br><br>
+                 <button class="ok-btn" type="button" onclick="newProductClose()">Add Product</button>
+               </form>
+           </div>
+        </div>
+              </div>
+              <!-- POP UP SECTION ENDS -->
+            </div>
+           <!-- Main Product Table -->
+            <div class="main-product">
+             <div class="top-head-2">
+              <h3><i class="fa-solid fa-box-archive"></i> All Products</h3>
+             </div>
+             <table border="1">
+              <thead>
+                <tr>
+                  <th>S/N</th>
+                  <th>Product Name</th>
+                  <th>Quantity</th>
+                  <th>In Stock</th>
+              </tr>
+              </thead>
+          <tbody>
+            <tr onclick="tableProductOpenOne()" class="main-tr">
+              <td>1.</td>
+              <td>MDF Wood</td>
+              <td>34</td>
+               <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenTwo()">
+              <td>2.</td>
+              <td>HDF Wood</td>
+              <td>14</td>
+              <td class="edit-icon">Few units left <i class="fa-solid fa-hourglass-half"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenThree()">
+              <td>3.</td>
+              <td>BB Wood</td>
+              <td>12</td>
+              <td class="edit-icon">Few units left <i class="fa-solid fa-hourglass-half"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenFour()">
+              <td>4.</td>
+              <td>Marine Wood</td>
+              <td>28</td>
+              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenFive()">
+              <td>5.</td>
+              <td>China Plywood</td>
+              <td>34</td>
+              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenSix()">
+              <td>6.</td>
+              <td>Local Plywood</td>
+              <td>12</td>
+              <td class="edit-icon">Few units left <i class="fa-solid fa-hourglass-half"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenSeven()">
+              <td>7.</td>
+              <td>Fluted Panels</td>
+              <td>3</td>
+              <td class="edit-icon">Few units left <i class="fa-solid fa-hourglass-half"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenEight()">
+              <td>8.</td>
+              <td>Door Skin</td>
+              <td>34</td>
+              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenNine()">
+              <td>9.</td>
+              <td>Particular Wood</td>
+              <td>0</td>
+              <td class="edit-icon">Out of Stock <i class="fa-solid fa-hourglass-end"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenTen()">
+              <td>10.</td>
+              <td>Edges Tape</td>
+              <td>22</td>
+              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+          </tr>
+          <tr class="main-tr" onclick="tableProductOpenEleven()">
+              <td>11.</td>
+              <td>Rongtai MDF</td>
+              <td>34</td>
+              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+          </tr>
+          </tbody>
+             </table>
+             <!--Pop up Products Info Via Table-->
+              <!-- First Product -->
+              <div class="table-1-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-1" id="tableProduct-popup-1">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseOne()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">MDF Wood</td>
+                  <td contenteditable="true" data-table="Categories">1/4, 1/2, 3/4 <br>(Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">34</td>
+                  <td contenteditable="true" data-table="Cost Price">24,000</td>
+                  <td contenteditable="true" data-table="Current Selling Price">30,000</td>
+                  <td contenteditable="true" data-table="Date Added">14-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Second Product -->
+              <div class="table-2-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-2" id="tableProduct-popup-2">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseTwo()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">HDF Wood</td>
+                  <td contenteditable="true" data-table="Categories">1/4, 3/4 <br> (Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">12</td>
+                  <td contenteditable="true" data-table="Cost Price">21,000</td>
+                  <td contenteditable="true" data-table="Current Selling Price">26,000</td>
+                  <td contenteditable="true" data-table="Date Added">4-12-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Third Product -->
+              <div class="table-3-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-3" id="tableProduct-popup-3">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseThree()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">BB Wood</td>
+                  <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">32</td>
+                  <td contenteditable="true" data-table="Cost Price">25,000</td>
+                  <td contenteditable="true" data-table="Current Selling Price">36,000</td>
+                  <td contenteditable="true" data-table="Date Added">1-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Fourth Product -->
+              <div class="table-4-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-4" id="tableProduct-popup-4">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseFour()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">Marine Wood</td>
+                  <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">27</td>
+                  <td contenteditable="true" data-table="Cost Price">5,000</td>
+                  <td contenteditable="true" data-table="Current Selling Price">10,000</td>
+                  <td contenteditable="true" data-table="Date Added">11-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Fifth Product -->
+              <div class="table-5-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-5" id="tableProduct-popup-5">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseFive()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">China Plywood</td>
+                  <td contenteditable="true" data-table="Categories">1/4, 1/2, 1/8<br> (Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">32</td>
+                  <td contenteditable="true" data-table="Cost Price">15,000</td>
+                  <td contenteditable="true" data-table="Current Selling Price">26,000</td>
+                  <td contenteditable="true" data-table="Date Added">10-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Sixth Product -->
+              <div class="table-6-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-6" id="tableProduct-popup-6">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseSix()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">Local Plywood</td>
+                  <td contenteditable="true" data-table="Categories">1/4, 1/2, 1/8<br> (Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">10</td>
+                  <td contenteditable="true" data-table="Cost Price">5,000</td>
+                  <td contenteditable="true" data-table="Current Selling">6,000</td>
+                  <td contenteditable="true" data-table="Date Added">10-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Seventh Product -->
+              <div class="table-7-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-7" id="tableProduct-popup-7">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseSeven()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">Fluted Panels</td>
+                  <td contenteditable="true" data-table="Categories">(Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">80</td>
+                  <td contenteditable="true" data-table="Cost Price">35,000</td>
+                  <td contenteditable="true" data-table="Current Selling">40,000</td>
+                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Eight Product -->
+              <div class="table-8-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-8" id="tableProduct-popup-8">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseEight()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">Door Skin</td>
+                  <td contenteditable="true" data-table="Categories">(Different Designs & Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">24</td>
+                  <td contenteditable="true" data-table="Cost Price">17,500</td>
+                  <td contenteditable="true" data-table="Current Selling Price">20,000</td>
+                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Ninth Product -->
+              <div class="table-9-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-9" id="tableProduct-popup-9">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseNine()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">Particular Wood</td>
+                  <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">4</td>
+                  <td contenteditable="true" data-table="Cost Price">11,200</td>
+                  <td contenteditable="true" data-table="Current Selling Price">12,500</td>
+                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Tenth Product -->
+              <div class="table-10-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-10" id="tableProduct-popup-10">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseTen()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">Edges Tape</td>
+                  <td contenteditable="true" data-table="Categories">1/4, 1/2, 3/4 <br> (Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">40</td>
+                  <td contenteditable="true" data-table="Cost Price">15,200</td>
+                  <td contenteditable="true" data-table="Current Selling Price">17,500</td>
+                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- Eleventh Product -->
+              <div class="table-11-pop">
+                <div class="tableProduct-container">
+           <div class="tableProduct-popup-11" id="tableProduct-popup-11">
+            <i class="fa-solid fa-xmark" onclick="tableProductCloseEleven()" style="color: black;"></i>
+            <h2>Product Information</h2>
+            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
+            <table border="1" id="myTable">
+              <thead id="myTableHead">
+                <tr>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Current Selling Price</th>
+                  <th>Date Added</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" data-table="Product Name">Rongtai MDF</td>
+                  <td contenteditable="true" data-table="Categories">1/4, 1/2, 3/4 <br> (Different Colours)</td>
+                  <td contenteditable="true" data-table="Quantity">40</td>
+                  <td contenteditable="true" data-table="Cost Price">15,200</td>
+                  <td contenteditable="true" data-table="Current Selling Price">17,500</td>
+                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+              </div>
+              <!-- POP UP SECTION ENDS -->
+            </div>
+           </div>
+      </main>
+    </div>
+    
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="Js/product.js"></script>
+    <!-- Internal Javascript -->
+    <script>
+      // Pop Up for Adding New Product
+      let openNewProduct = document.getElementById("newProduct-popup");
+ function newProductOpen() {
+    openNewProduct.classList.add("newProduct-openpopup");
+ }
+ function newProductClose() {
+    openNewProduct.classList.remove("newProduct-openpopup")
+ };
+
+//  Table Info Pop up
+// Number 1
+let tableProduct1 = document.getElementById("tableProduct-popup-1");
+ function tableProductOpenOne() {
+    tableProduct1.classList.add("productOne");
+ }
+ function tableProductCloseOne() {
+    tableProduct1.classList.remove("productOne")
+ };
+ // Number 2
+let tableProduct2 = document.getElementById("tableProduct-popup-2");
+ function tableProductOpenTwo() {
+    tableProduct2.classList.add("productTwo");
+ }
+ function tableProductCloseTwo() {
+    tableProduct2.classList.remove("productTwo")
+ };
+  // Number 3
+let tableProduct3 = document.getElementById("tableProduct-popup-3");
+ function tableProductOpenThree() {
+    tableProduct3.classList.add("productThree");
+ }
+ function tableProductCloseThree() {
+    tableProduct3.classList.remove("productThree")
+ };
+  // Number 4
+let tableProduct4 = document.getElementById("tableProduct-popup-4");
+ function tableProductOpenFour() {
+    tableProduct4.classList.add("productFour");
+ }
+ function tableProductCloseFour() {
+    tableProduct4.classList.remove("productFour")
+ };
+  // Number 5
+let tableProduct5 = document.getElementById("tableProduct-popup-5");
+ function tableProductOpenFive() {
+    tableProduct5.classList.add("productFive");
+ }
+ function tableProductCloseFive() {
+    tableProduct5.classList.remove("productFive")
+ };
+   // Number 6
+let tableProduct6 = document.getElementById("tableProduct-popup-6");
+ function tableProductOpenSix() {
+    tableProduct6.classList.add("productSix");
+ }
+ function tableProductCloseSix() {
+    tableProduct6.classList.remove("productSix")
+ };
+   // Number 7
+let tableProduct7 = document.getElementById("tableProduct-popup-7");
+ function tableProductOpenSeven() {
+    tableProduct7.classList.add("productSeven");
+ }
+ function tableProductCloseSeven() {
+    tableProduct7.classList.remove("productSeven")
+ };
+   // Number 8
+let tableProduct8 = document.getElementById("tableProduct-popup-8");
+ function tableProductOpenEight() {
+    tableProduct8.classList.add("productEight");
+ }
+ function tableProductCloseEight() {
+    tableProduct8.classList.remove("productEight")
+ };
+   // Number 9
+let tableProduct9 = document.getElementById("tableProduct-popup-9");
+ function tableProductOpenNine() {
+    tableProduct9.classList.add("productNine");
+ }
+ function tableProductCloseNine() {
+    tableProduct9.classList.remove("productNine")
+ };
+   // Number 10
+let tableProduct10 = document.getElementById("tableProduct-popup-10");
+ function tableProductOpenTen() {
+    tableProduct10.classList.add("productTen");
+ }
+ function tableProductCloseTen() {
+    tableProduct10.classList.remove("productTen")
+ };
+   // Number 11
+let tableProduct11 = document.getElementById("tableProduct-popup-11");
+ function tableProductOpenEleven() {
+    tableProduct11.classList.add("productEleven");
+ }
+ function tableProductCloseEleven() {
+    tableProduct11.classList.remove("productEleven")
+ };
+//  Local Storage For Pop Up Editing
+// Save table data excluding the actions row
+function saveTableToLocalStorage() {
+          const tableData = [];
+          const rows = document.querySelectorAll('#myTable tr');
+  
+          rows.forEach((row, index) => {
+              // Exclude the row containing buttons (Actions Row)
+              if (row.id !== 'actionsRow') {
+                  const rowData = [];
+                  const cells = row.querySelectorAll('td');
+                  cells.forEach(cell => {
+                      rowData.push(cell.innerText); // Save text data
+                  });
+                  tableData.push(rowData);
+              }
+          });
+  
+          // Store the table data (text content) in localStorage
+          localStorage.setItem('tableData', JSON.stringify(tableData));
+      }
+  
+      // Load the table data from localStorage
+      function loadTableFromLocalStorage() {
+          const storedData = localStorage.getItem('tableData');
+          if (storedData) {
+              const tableData = JSON.parse(storedData);
+              const rows = document.querySelectorAll('#myTable tr');
+  
+              // Iterate through the table rows and fill in the data
+              tableData.forEach((rowData, rowIndex) => {
+                  const row = rows[rowIndex];
+                  if (row && row.id !== 'actionsRow') { // Skip actions row
+                      const cells = row.querySelectorAll('td');
+                      rowData.forEach((cellData, cellIndex) => {
+                          cells[cellIndex].innerText = cellData; // Restore text content
+                      });
+                  }
+              });
+          }
+      }
+  
+      // Event listener for input in table cells (trigger save when edited)
+      document.querySelectorAll('#myTable td[contenteditable="true"]').forEach(cell => {
+          cell.addEventListener('input', () => {
+              saveTableToLocalStorage(); // Save whenever content is edited
+          });
+      });
+  
+      // Load table data when the page is loaded
+      window.onload = function() {
+          loadTableFromLocalStorage(); // Populate table with saved data
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Inventory Page</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Css/inventory.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined" id="openBar">menu</span>
+        </div>
+        <h2 class="header-left">
+           Ochioso Global Link
+        </h2>
+        <div class="header-right">
+          <a href="users.html">
+            <i class="fa-solid fa-circle-user" id="main-user"></i>
+           </a>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="external">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">inventory</span> Admin Panel
+          </div>
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()" id="openBar">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="index.html">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="users.html">  <i class="fa-solid fa-user"></i> User Management</a></li>
+          </li>
+          
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="product.html">
+              <span class="material-icons-outlined">inventory_2</span> Products
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="#">
+              <span class="material-icons-outlined">fact_check</span> Inventory
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="purchase.html">
+              <span class="material-icons-outlined">add_shopping_cart</span> Purchase Stock
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="sales.html">
+              <span class="material-icons-outlined">shopping_cart</span> Sales Orders
+            </a>
+          </li>
+          <li class="sidebar-list-item-1">
+            <a class="drop-link" href="alert.html">
+              <span class="material-icons-outlined">poll</span> Inventory Alerts
+            </a>
+          </li>
+         
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+        <!-- Product Table -->
+        <main class="main-container">
+          <h2 style="text-align: center;">Inventory List</h2>
+          <div class="top-headers">
+            <!-- Date Input -->
+            <div class="side-btn">
+              <input type="date" name="" id="date">
+          </div>
+          <!-- Search Bar -->
+          <div class="search-container">
+            <input class="searchBar" type="search" placeholder="Search Product">
+            <button class="add-new"><i class="fas fa-search"></i></button>
+          </div>
+          </div>
+         <div class="table-section">
+          <!-- Inventory Table -->
+          <table id="myTable">
+           <thead>
+            <tr>
+              <th>S/N</th>
+              <th>Product Name</th>
+              <th>Categories</th>
+              <th>Quantity</th>
+              <th>Cost Price</th>
+              <th>Selling Price</th>
+              <th>Date Added</th>
+          </tr>
+           </thead>
+            <tbody>
+              <tr>
+                <td data-table="S/N">1.</td>
+                <td contenteditable="true" data-table="Product Name">MDF Wood</td>
+                <td contenteditable="true" data-table="Categories">1/4, 1/2, 3/4 <br> (Different Colours)</td>
+                <td contenteditable="true"data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            <tr>
+                <td data-table="S/N">2.</td>
+                <td  contenteditable="true" data-table="Product Name">HDF Wood</td>
+                <td  contenteditable="true" data-table="Categories">1/4,  3/4 <br> (Different Colours)</td>
+                <td  contenteditable="true" data-table="Quantity">27</td>
+                <td  contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td  contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td  contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            <tr>
+                <td data-table="S/N">3.</td>
+                <td contenteditable="true" data-table="Product Name">BB Wood</td>
+                <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
+                <td contenteditable="true" data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            <tr>
+                <td data-table="S/N">4.</td>
+                <td contenteditable="true" data-table="Product Name">Marine Wood</td>
+                <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
+                <td contenteditable="true" data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            <tr>
+                <td data-table="S/N">5.</td>
+                <td contenteditable="true" data-table="Product Name">China Plywood</td>
+                <td contenteditable="true" data-table="Categories">1/4, 1/2, 1/8 <br> (Different Colours)</td>
+                <td contenteditable="true" data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            <tr>
+                <td data-table="S/N">6.</td>
+                <td contenteditable="true" data-table="Product Name">Local Plywood</td>
+                <td contenteditable="true" data-table="Categories">1/4, 1/2, 3/4 <br> (Different Colours)</td>
+                <td contenteditable="true" data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            <tr>
+                <td data-table="S/N">7.</td>
+                <td contenteditable="true" data-table="Product Name">Door Skin</td>
+                <td contenteditable="true" data-table="Categories">(Different Design & Colours)</td>
+                <td contenteditable="true" data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td> 
+            </tr>
+            <tr>
+                <td data-table="S/N">8.</td>
+                <td contenteditable="true" data-table="Product Name">Fluted Panels</td>
+                <td contenteditable="true" data-table="Categories">(Different Colours)</td>
+                <td contenteditable="true" data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            <tr>
+                <td data-table="S/N">9.</td>
+                <td contenteditable="true" data-table="Product Name">Edges Tape</td>
+                <td contenteditable="true" data-table="Categories">1/4, 1/2, 3/4 <br> (Different Colours)</td>
+                <td contenteditable="true" data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            <tr>
+                <td  data-table="S/N">10.</td>
+                <td contenteditable="true" data-table="Product Name">Particular Wood</td>
+                <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
+                <td contenteditable="true" data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            <tr>
+                <td data-table="S/N">11.</td>
+                <td contenteditable="true" data-table="Product Name">Rongtai MDF</td>
+                <td contenteditable="true" data-table="Categories">1/4, 1/2, 3/4 <br> (Different Colours)</td>
+                <td contenteditable="true" data-table="Quantity">27</td>
+                <td contenteditable="true" data-table="Cost Price">₦15,000</td>
+                <td contenteditable="true" data-table="Selling Price">₦20,000</td>
+                <td contenteditable="true" data-table="Date Added">14th Feb, 2025</td>
+            </tr>
+            </tbody>
+        </table>
+         </div>
+      </main>
+    </div>
+    
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="Js/inventory.js"></script>
+    <!-- Internal Javascript -->
+    
+  </body>
+</html>
