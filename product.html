@@ -15,6 +15,36 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="Css/product.css">
+    <!-- Internal Css -->
+     <style>
+       
+select {
+  padding: 10px 15px; 
+  border: 2px solid #4f35a1; 
+  border-radius: 5px;
+  background-color: #f9f9f9; 
+  color: #333; 
+  width: 200px; 
+  outline: none; 
+  transition: border 0.3s ease; 
+}
+
+
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+option {
+  padding: 10px;
+}
+
+
+select:hover {
+  border-color: #4f35a1; 
+}
+
+     </style>
   </head>
   <body>
     <div class="grid-container">
@@ -120,7 +150,39 @@
             <div class="main-product">
              <div class="top-head-2">
               <h3><i class="fa-solid fa-box-archive"></i> All Products</h3>
+              <div class="btn-container"><button class="add-new" onclick="updateProductOpen()">+ Update Product</button></div><br>
              </div>
+              <!-- Pop up for Updating product -->
+              <div class="pop">
+                <div class="updateProduct-container">
+           <div class="update-popup" id="updateProduct-popup">
+               <form action=""> 
+                <i class="fa-solid fa-xmark" onclick="updateProductClose()"></i>
+                <h4 style="text-align: center; color: black;">Update Product</h4>
+                <select name="Product Name" id="updatedProduct2">
+                  <option value="MDF-Wood">MDF Wood</option>
+                  <option value="HDF-Wood">HDF Wood</option>
+                  <option value="BB-Wood">BB Wood</option>
+                  <option value="Marine-Wood">Marine Wood</option>
+                  <option value="China-Plywood">China Plywood</option>
+                  <option value="Local-Plywood">Local Plywood</option>
+                  <option value="Fluted-Panels">Fluted Panels</option>
+                  <option value="Door-Skin">Door Skin</option>
+                  <option value="Particular-Wood">Particular Wood</option>
+                  <option value="Edges-Tape">Edges Tape</option>
+                  <option value="Rongtai-MDF">Rongtai MDF</option>
+                </select>
+                 <br><br>
+                 <input class="new-input" type="text" name="" id="" placeholder="Categories"><br><br>
+                 <input class="new-input" type="number" name="" id="" placeholder="Product Quantity"><br><br>
+                 <input class="new-input" type="number" name="" id="" placeholder="Cost Price"><br><br>
+                 <input class="new-input" type="number" name="" id="" placeholder="Selling Price"><br><br>
+                 <button class="ok-btn" type="button" onclick="updateProductClose()">Update Product</button>
+               </form>
+           </div>
+        </div>
+              </div>
+              <!-- POP UP SECTION ENDS -->
              <table border="1">
               <thead>
                 <tr>
@@ -134,68 +196,68 @@
             <tr onclick="tableProductOpenOne()" class="main-tr">
               <td>1.</td>
               <td>MDF Wood</td>
-              <td>34</td>
-               <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+              <td>0</td>
+               <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenTwo()">
               <td>2.</td>
               <td>HDF Wood</td>
-              <td>14</td>
-              <td class="edit-icon">Few units left <i class="fa-solid fa-hourglass-half"></i></td>
+              <td>0</td>
+              <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenThree()">
               <td>3.</td>
               <td>BB Wood</td>
-              <td>12</td>
-              <td class="edit-icon">Few units left <i class="fa-solid fa-hourglass-half"></i></td>
+              <td>0</td>
+              <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenFour()">
               <td>4.</td>
               <td>Marine Wood</td>
-              <td>28</td>
-              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+              <td>0</td>
+              <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenFive()">
               <td>5.</td>
               <td>China Plywood</td>
-              <td>34</td>
-              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+              <td>0</td>
+              <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenSix()">
               <td>6.</td>
               <td>Local Plywood</td>
-              <td>12</td>
-              <td class="edit-icon">Few units left <i class="fa-solid fa-hourglass-half"></i></td>
+              <td>0</td>
+              <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenSeven()">
               <td>7.</td>
               <td>Fluted Panels</td>
-              <td>3</td>
-              <td class="edit-icon">Few units left <i class="fa-solid fa-hourglass-half"></i></td>
+              <td>0</td>
+              <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenEight()">
               <td>8.</td>
               <td>Door Skin</td>
-              <td>34</td>
-              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+              <td>0</td>
+              <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenNine()">
               <td>9.</td>
               <td>Particular Wood</td>
               <td>0</td>
-              <td class="edit-icon">Out of Stock <i class="fa-solid fa-hourglass-end"></i></td>
+              <td class="edit-icon" style="color: red;">Out Of Stock </td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenTen()">
               <td>10.</td>
               <td>Edges Tape</td>
-              <td>22</td>
-              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+              <td>0</td>
+              <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           <tr class="main-tr" onclick="tableProductOpenEleven()">
               <td>11.</td>
               <td>Rongtai MDF</td>
-              <td>34</td>
-              <td class="edit-icon">In Stock<i class="fa-solid fa-circle-check"></i></td>
+              <td>0</td>
+              <td class="edit-icon" style="color: red;">Out Of Stock</td>
           </tr>
           </tbody>
              </table>
@@ -573,6 +635,15 @@
  }
  function newProductClose() {
     openNewProduct.classList.remove("newProduct-openpopup")
+ };
+
+  // Pop Up for Updating Current Product
+  let updateProduct = document.getElementById("updateProduct-popup");
+ function updateProductOpen() {
+    updateProduct.classList.add("newProduct-openpopup");
+ }
+ function updateProductClose() {
+    updateProduct.classList.remove("newProduct-openpopup")
  };
 
 //  Table Info Pop up

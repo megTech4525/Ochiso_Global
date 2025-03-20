@@ -213,6 +213,10 @@ td{
   padding: 10px;
   cursor: pointer;
 }
+.btn-container{
+  display: flex;
+  justify-content: flex-end;
+}
 .add-new{
   padding: 10px 10px;
   background-color: #4f35a1;
@@ -262,7 +266,7 @@ input{
 .register-container{
   width: 100%;
 }
-.addNew-popup{
+.addNew-popup, .update-popup{
    width: 30%;
    background-color: #837f7f;
    border-radius: 6px;
@@ -605,7 +609,7 @@ input{
   padding-left: 2rem;
   width: 51%;
  }
- .addNew-popup{
+ .addNew-popup, .update-popup{
   width: 50%;
 }
  .tableProduct-popup-1{
@@ -869,7 +873,7 @@ input{
     .header-left{
       text-align: center;
     }
-     .addNew-popup{
+     .addNew-popup, .update-popup{
       width: 60%;
     }
     .trash-btn{
