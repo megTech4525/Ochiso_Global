@@ -916,6 +916,9 @@ input{
     .header-left{
       font-size: 23px;
     }
+    .edit-icon{
+      font-size: 12px;
+    }
   }
   @media (max-width:320px) {
     .header-left{
