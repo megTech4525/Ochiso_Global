@@ -75,7 +75,7 @@
           </li>
           <li class="sidebar-list-item-1">
             <a class="drop-link" href="sales.html">
-              <span class="material-icons-outlined">shopping_cart</span> Sales Orders
+              <span class="material-icons-outlined">shopping_cart</span> Stock Out
             </a>
           </li>
           <li class="sidebar-list-item-1">
@@ -103,22 +103,28 @@
           </div>
          <div class="table-section">
           <!-- Purchase Stock Table -->
-          <table id="myTable">
-           <thead>
-            <tr>
-              <th>S/N</th>
-              <th>Product Name</th>
-              <th>Categories</th>
-              <th>Purchased Quantity</th>
-              <th>Date Added</th>
-          </tr>
-           </thead>
-           <tbody>
-            <td colspan="5" style="text-align: center; color: red;">
-              <h1 id="no-inventory">No Purchased Stock</h1>
-          </td>
-          </tbody>
-        </table>
+          <table border="1" id="myTable">
+            <thead id="myTableHead">
+              <tr>
+                <th>S/N</th>
+                <th>Product Name</th>
+                <th>Categories</th>
+                <th>Purchased Quantity</th>
+                <th>Purchased Price</th>
+                <th>Date Added</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-table="S/N">1.</td>
+                <td data-table="Product Name"><span style="color: red;">Empty Stock</span></td>
+                <td data-table="Categories"><span style="color: red;">Empty Stock</span></td>
+                <td data-table="Purchased Quantity"><span style="color: red;">Empty Stock</span></td>
+                <td data-table="Purchased Price"><span style="color: red;">Empty Stock</span></td>
+                <td data-table="Date Added"><span style="color: red;">Empty Stock</span></td>
+              </tr>
+            </tbody>
+          </table>
          </div>
       </main>
     </div>

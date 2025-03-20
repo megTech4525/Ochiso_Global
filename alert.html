@@ -122,7 +122,7 @@
           </li>
           <li class="sidebar-list-item-1">
             <a class="drop-link" href="sales.html">
-              <span class="material-icons-outlined">shopping_cart</span> Sales Orders
+              <span class="material-icons-outlined">shopping_cart</span> Stock Out
             </a>
           </li>
           <li class="sidebar-list-item-1">
@@ -136,22 +136,29 @@
       <!-- End Sidebar -->
         <!-- Product Table -->
         <main class="main-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Product Name</th>
-                        <th>Remaining Stock</th>
-                        <th>Status</th>
-                        <th>Last Restocked</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  <td colspan="5" style="text-align: center; color: red;">
-                    <h1 id="no-inventory">No Inventory Alerts</h1>
-                </td>
-                </tbody>
-            </table>
+          <h3 style="text-align: center;">Inventory Alerts</h3>
+          <table border="1" id="myTable">
+            <thead id="myTableHead">
+              <tr>
+                <th>S/N</th>
+                <th>Product Name</th>
+                <th>Categories</th>
+                <th>Purchased Quantity</th>
+                <th>Purchased Price</th>
+                <th>Date Added</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-table="S/N">1.</td>
+                <td data-table="Product Name"><span style="color: red;">Empty Stock</span></td>
+                <td data-table="Categories"><span style="color: red;">Empty Stock</span></td>
+                <td data-table="Purchased Quantity"><span style="color: red;">Empty Stock</span></td>
+                <td data-table="Purchased Price"><span style="color: red;">Empty Stock</span></td>
+                <td data-table="Date Added"><span style="color: red;">Empty Stock</span></td>
+              </tr>
+            </tbody>
+          </table>
       </main>
     </div>
     

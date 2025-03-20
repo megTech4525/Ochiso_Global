@@ -277,4 +277,29 @@ body {
     .header-left{
       text-align: center;
     }
+    #myTable{
+      width: 100%;
+     }
+    #myTable #myTableHead{
+      display: none;
+    }
+    #myTable tr, #myTable td{
+      display: block;
+      /* width: 100%; */
+    }
+    #myTable tbody tr td{
+      text-align: right;
+    }
+    #myTable td::before{
+      content: attr(data-table);
+      position: absolute;
+      left: 0;
+      padding-left: 40px;
+      font-size: 14px;
+  }
+  }
+  @media (max-width:390px) {
+    .header-left{
+      font-size: 23px;
+    }
   }

@@ -862,6 +862,11 @@ input{
       padding: 20px;
       width: 85%;
     }
+    .productOne, .productTwo, .productFive, .productSix, .productTen, .productEleven{
+      top: 60%;
+      visibility: visible;
+      transform: translate(-50%, -40%) scale(1);
+    }
     .top-head-1{
       border-bottom: #4f35a1 2px solid;
       padding-left: 2rem;
@@ -908,9 +913,17 @@ input{
     {
       top: 70%;
     }
+    .header-left{
+      font-size: 23px;
+    }
   }
   @media (max-width:320px) {
     .header-left{
       font-size: 20px;
+    }
+    .productOne, .productTwo, .productFive, .productSix, .productTen, .productEleven{
+      top: 60%;
+      visibility: visible;
+      transform: translate(-50%, -20%) scale(1);
     }
   }

@@ -83,7 +83,7 @@
           </li>
           <li class="sidebar-list-item-1">
             <a class="drop-link" href="sales.html">
-              <span class="material-icons-outlined">shopping_cart</span> Sales Orders
+              <span class="material-icons-outlined">shopping_cart</span> Stock Out
             </a>
           </li>
           <li class="sidebar-list-item-1">
@@ -111,24 +111,30 @@
           </div>
          <div class="table-section">
           <!-- Inventory Table -->
-          <table id="myTable">
-           <thead>
-            <tr>
-              <th>S/N</th>
-              <th>Product Name</th>
-              <th>Categories</th>
-              <th>Quantity</th>
-              <th>Cost Price</th>
-              <th>Selling Price</th>
-              <th>Date Added</th>
-          </tr>
-           </thead>
+          <table border="1" id="myTable">
+            <thead id="myTableHead">
+              <tr>
+                <th>S/N</th>
+                <th>Product Name</th>
+                <th>Categories</th>
+                <th>Quantity</th>
+                <th>Cost Price</th>
+                <th>Selling Price</th>
+                <th>Date Added</th>
+              </tr>
+            </thead>
             <tbody>
-              <td colspan="7" style="text-align: center; color: red;">
-                <h1 id="no-inventory">No Current Inventory</h1>
-            </td>
+              <tr>
+                <td data-table="S/N">1.</td>
+                <td data-table="Product Name"><span style="color: red;">No Current Inventory</span></td>
+                <td data-table="Categories"><span style="color: red;">No Current Inventory</span></td>
+                <td data-table="Quantity"><span style="color: red;">No Current Inventory</span></td>
+                <td data-table="Cost Price"><span style="color: red;">No Current Inventory</span></td>
+                <td data-table="Selling Price"><span style="color: red;">No Current Inventory</span></td>
+                <td data-table="Date Added"><span style="color: red;">No Current Inventory</span></td>
+              </tr>
             </tbody>
-        </table>
+          </table>
          </div>
       </main>
     </div>

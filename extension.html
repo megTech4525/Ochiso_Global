@@ -1,173 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Product Page</title>
-
-    <!-- Montserrat Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="Css/product.css">
-  </head>
-  <body>
-    <div class="grid-container">
-
-      <!-- Header -->
-      <header class="header">
-        <div class="menu-icon" onclick="openSidebar()">
-          <span class="material-icons-outlined" id="openBar">menu</span>
-        </div>
-        <h2 class="header-left">
-           Ochioso Global Link
-        </h2>
-        <div class="header-right">
-          <span class="material-icons-outlined" id="checkout">notifications</span>
-          <span class="material-icons-outlined" id="checkout">email</span>
-          <span class="material-icons-outlined" id="checkout">search</span>
-        </div>
-      </header>
-      <!-- End Header -->
-
-      <!-- Sidebar -->
-      <aside id="sidebar">
-        <div class="sidebar-title">
-          <div class="external">
-          <div class="sidebar-brand">
-            <span class="material-icons-outlined">inventory</span> Admin Panel
-          </div>
-          </div>
-          <span class="material-icons-outlined" onclick="closeSidebar()" id="openBar">close</span>
-        </div>
-
-        <ul class="sidebar-list">
-          <li class="sidebar-list-item">
-            <a href="index.html">
-              <span class="material-icons-outlined">dashboard</span> Dashboard
-            </a>
-          </li>
-          <li class="sidebar-list-item-2">
-            <button class="dropdown-btn" onclick="toggleSubMenu(this)">
-              <i class="fa-solid fa-user"></i> User Management
-              <i class="fa-solid fa-angle-down"></i>
-            </button>
-            <ul class="sub-menu" style="display: none;">
-              <li><a class="drop-link" href="#"><i class="fa-solid fa-user-tie"></i> Administrator</a></li><br>
-              <li><a class="drop-link" href="users.html"><i class="fa-solid fa-users"></i> Users</a></li>
-            </ul>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="#">
-              <span class="material-icons-outlined">inventory_2</span> Products
-            </a>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="inventory.html">
-              <span class="material-icons-outlined">fact_check</span> Inventory
-            </a>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="#">
-              <span class="material-icons-outlined">add_shopping_cart</span> Purchase Orders
-            </a>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="#">
-              <span class="material-icons-outlined">shopping_cart</span> Sales Orders
-            </a>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="#">
-              <span class="material-icons-outlined">poll</span> Reports
-            </a>
-          </li>
-         
-        </ul>
-      </aside>
-      <!-- End Sidebar -->
-        <!-- Product Table -->
-        <main class="main-container">
-           <div class="product-container">
-             <h3 class="product-head" style="text-align: center;">Our Products</h3><br>
-              <div class="table-section">
-                <table border="1">
-                  <tr>
-                      <th>S/N</th>
-                      <th>Product Name</th>
-                      <th>In Stock</th>
-                  </tr>
-                  <tr>
-                      <td>1.</td>
-                      <td>MDF Wood</td>
-                       <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>2.</td>
-                      <td>HDF Wood</td>
-                      <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>3.</td>
-                      <td>BB Wood</td>
-                      <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>4.</td>
-                      <td>Marine Wood</td>
-                      <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>5.</td>
-                      <td>China Plywood</td>
-                      <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>6.</td>
-                      <td>Local Plywood</td>
-                      <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>7.</td>
-                      <td>Fluted Panels</td>
-                      <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>8.</td>
-                      <td>Door Skin</td>
-                      <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>9.</td>
-                      <td>Particular Wood</td>
-                      <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>10.</td>
-                      <td>Edges Tape</td>
-                      <td>In Stock</td>
-                  </tr>
-                  <tr>
-                      <td>11.</td>
-                      <td>Rongtai MDF</td>
-                      <td>In Stock</td>
-                  </tr>
-                 </table>
-              </div>
-           </div>
-      </main>
-    </div>
-    
-
-    <!-- Scripts -->
-    <!-- ApexCharts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
-    <!-- Custom JS -->
-    <script src="Js/product.js"></script>
-  </body>
-</html>
+<!-- Script For Table Edition -->
+// Save table data excluding the actions row
+function saveTableToLocalStorage() {
+          const tableData = [];
+          const rows = document.querySelectorAll('#myTable tr');
+  
+          rows.forEach((row, index) => {
+              // Exclude the row containing buttons (Actions Row)
+              if (row.id !== 'actionsRow') {
+                  const rowData = [];
+                  const cells = row.querySelectorAll('td');
+                  cells.forEach(cell => {
+                      rowData.push(cell.innerText); // Save text data
+                  });
+                  tableData.push(rowData);
+              }
+          });
+  
+          // Store the table data (text content) in localStorage
+          localStorage.setItem('tableData', JSON.stringify(tableData));
+      }
+  
+      // Load the table data from localStorage
+      function loadTableFromLocalStorage() {
+          const storedData = localStorage.getItem('tableData');
+          if (storedData) {
+              const tableData = JSON.parse(storedData);
+              const rows = document.querySelectorAll('#myTable tr');
+  
+              // Iterate through the table rows and fill in the data
+              tableData.forEach((rowData, rowIndex) => {
+                  const row = rows[rowIndex];
+                  if (row && row.id !== 'actionsRow') { // Skip actions row
+                      const cells = row.querySelectorAll('td');
+                      rowData.forEach((cellData, cellIndex) => {
+                          cells[cellIndex].innerText = cellData; // Restore text content
+                      });
+                  }
+              });
+          }
+      }
+  
+      // Event listener for input in table cells (trigger save when edited)
+      document.querySelectorAll('#myTable td[contenteditable="true"]').forEach(cell => {
+          cell.addEventListener('input', () => {
+              saveTableToLocalStorage(); // Save whenever content is edited
+          });
+      });
+  
+      // Load table data when the page is loaded
+      window.onload = function() {
+          loadTableFromLocalStorage(); // Populate table with saved data
+      };

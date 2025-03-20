@@ -361,6 +361,11 @@ body {
       text-align: center;
     }
   }
+  @media (max-width:390px) {
+    .header-left{
+      font-size: 23px;
+    }
+  }
   @media (max-width:320px) {
     .header-left{
       font-size: 20px;

@@ -351,27 +351,6 @@ th, td {
       font-family: "Montserrat", sans-serif;
       letter-spacing: 1px;
     }
-    table thead{
-      display: none;
-  }
-  table tr, table td{
-      display: block;
-      width: 95%;
-  }
-  table tr{
-      margin-bottom: 3rem;
-  }
-  table tbody tr td{
-      text-align: right;
-  }
- td::before{
-      content: attr(data-table);
-      /* position: absolute;
-      left: 0; */
-      display: flex;
-      justify-content: flex-start;
-      padding-left: 10px;
-  }
   }
   
   /* Extra Small <= 576px */
@@ -412,6 +391,26 @@ th, td {
       color: gray;
       border-bottom-left-radius: 10px;
     }
+    #myTable{
+      width: 100%;
+     }
+    #myTable #myTableHead{
+      display: none;
+    }
+    #myTable tr, #myTable td{
+      display: block;
+      /* width: 100%; */
+    }
+    #myTable tbody tr td{
+      text-align: right;
+    }
+    #myTable td::before{
+      content: attr(data-table);
+      position: absolute;
+      left: 0;
+      padding-left: 40px;
+      font-size: 14px;
+  }
   }
   @media (max-width: 414px) {
     .searchBar{
@@ -448,6 +447,9 @@ th, td {
       place-content: center;
       font-family: "Montserrat", sans-serif;
       letter-spacing: 1px;
+    }
+    .header-left{
+      font-size: 23px;
     }
   }
   @media (max-width:320px) {
