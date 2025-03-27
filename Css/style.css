@@ -75,105 +75,117 @@ body {
     color: #246dec;
   }
   
-  /* ---------- SIDEBAR ---------- */
-  
-  #sidebar {
-    grid-area: sidebar;
-    height: 100%;
-    background-color: #21232d;
-    color: #9799ab;
-    overflow-y: auto;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-  }
-  
-  .sidebar-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px 20px 20px;
-    margin-bottom: 10px;
-  }
-  
-  .sidebar-title > span {
-    display: none;
-  }
-  
-  .sidebar-brand {
-    margin-top: 15px;
-    font-size: 20px;
-    font-weight: 700;
-  }
-  
-  .sidebar-list {
-    padding: 0;
-    margin-top: 15px;
-    list-style-type: none;
-  }
-  
-  .sidebar-list-item-1, .sidebar-list-item-2{
-    padding: 20px 20px 20px 20px;
-  }
-  
-  .sidebar-list-item-1:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    transition: 300ms ease-in-out;
-  }
-  .dropdown-btn:hover {
-   color: #ffffff;
-   transition: 100ms ease-in-out;
-  }
-  
-  .sidebar-list-item-1 > a, .drop-link{
-    text-decoration: none;
-    color: #e6e8ed;
-  }
-  
-  .sidebar-responsive {
-    display: inline !important;
-    position: absolute;
-    /*
-      the z-index of the ApexCharts is 11
-      we want the z-index of the sidebar higher so that
-      the charts are not showing over the sidebar 
-      on small screens
-    */
-    z-index: 12 !important;
-  }
-  .sub-menu{
-    list-style: none;
-  }
-  .dropdown-btn{
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #e6e8ed;
-    font: inherit;
-  }
-  .fa-angle-down{
-    color: #d2d2d3 ;
-  }
-  .sub-menu{
-     transition: 300ms ease-in-out;
-  }
-  .sub-menu{
-    padding-top: 1rem;
-    display: grid;
-    gap: 1rem;
-  }
-  /* Chevron icon rotation */
-  .fa-angle-down {
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-  }
 
-  /* Rotate the icon when dropdown is active */
-  .dropdown.active .fa-angle-down {
-    transform: rotate(180deg);
-  }
+  /* ---------- SIDEBAR ---------- */
+
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #21232d;
+  color: #9799ab;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 10px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.sidebar-list-item-1,
+.sidebar-list-item-2 {
+  padding: 20px 20px 20px 20px;
+}
+
+.sidebar-list-item-1:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.dropdown-btn:hover {
+  color: #ffffff;
+  transition: 100ms ease-in-out;
+}
+
+.sidebar-list-item-1 > a,
+.drop-link {
+  text-decoration: none;
+  color: #e6e8ed;
+}
+
+/* Dropdown Arrow Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-arrow {
+  font-size: 18px;
+  color: #e6e8ed;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Dropdown Styles */
+.dropdown-list {
+  display: none;  /* Hide the dropdown by default */
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.dropdown.active .dropdown-arrow {
+  transform: rotate(180deg); /* Rotate arrow when dropdown is active */
+}
+
+.dropdown.active .dropdown-list {
+  display: block;  /* Show dropdown when active */
+  border-radius: 5px;
+}
+
+.dropdown-list li {
+  padding: 10px 20px;
+}
+
+.dropdown-list li a {
+  color: #e6e8ed;
+  text-decoration: none;
+}
+
+.fa-circle-dot{
+  color: navajowhite;
+  font-size: 10px;
+}
+.fa-caret-down{
+  color: white;
+  margin-left: 0.5rem;
+}
+/* Responsive Sidebar */
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  z-index: 12 !important;
+}
 
 
   

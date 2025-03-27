@@ -77,7 +77,6 @@ body {
   }
   
   /* ---------- SIDEBAR ---------- */
-  
   #sidebar {
     grid-area: sidebar;
     height: 100%;
@@ -112,54 +111,80 @@ body {
     list-style-type: none;
   }
   
-  .sidebar-list-item-1{
+  .sidebar-list-item-1,
+  .sidebar-list-item-2 {
     padding: 20px 20px 20px 20px;
   }
   
   .sidebar-list-item-1:hover {
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
+    transition: 300ms ease-in-out;
   }
   
-  .sidebar-list-item-1 > a, .drop-link{
+  .dropdown-btn:hover {
+    color: #ffffff;
+    transition: 100ms ease-in-out;
+  }
+  
+  .sidebar-list-item-1 > a,
+  .drop-link {
     text-decoration: none;
     color: #e6e8ed;
   }
-  .sub-menu{
-    list-style: none;
+  
+  /* Dropdown Arrow Styles */
+  .dropdown {
+    position: relative;
   }
-  .dropdown-btn{
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
+  
+  .dropdown-arrow {
+    font-size: 18px;
     color: #e6e8ed;
-    font: inherit;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
   }
-  .fa-angle-down{
-    color: #d2d2d3 ;
+  
+  /* Dropdown Styles */
+  .dropdown-list {
+    display: none;  /* Hide the dropdown by default */
+    padding-left: 20px;
+    list-style-type: none;
   }
-  .sub-menu{
-     transition: 300ms ease-in-out;
+  
+  .dropdown.active .dropdown-arrow {
+    transform: rotate(180deg); /* Rotate arrow when dropdown is active */
   }
-  .sub-menu{
-    padding-top: 1rem;
-    display: grid;
-    gap: 1rem;
+  
+  .dropdown.active .dropdown-list {
+    display: block;  /* Show dropdown when active */
+    border-radius: 5px;
   }
+  
+  .dropdown-list li {
+    padding: 10px 20px;
+  }
+  
+  .dropdown-list li a {
+    color: #e6e8ed;
+    text-decoration: none;
+  }
+  
+  .fa-circle-dot{
+    color: navajowhite;
+    font-size: 10px;
+  }
+  .fa-caret-down{
+    color: white;
+    margin-left: 0.5rem;
+  }
+  /* Responsive Sidebar */
   .sidebar-responsive {
     display: inline !important;
     position: absolute;
-    /*
-      the z-index of the ApexCharts is 11
-      we want the z-index of the sidebar higher so that
-      the charts are not showing over the sidebar 
-      on small screens
-    */
     z-index: 12 !important;
   }
-  
   
   /* ---------- MAIN ---------- */
   

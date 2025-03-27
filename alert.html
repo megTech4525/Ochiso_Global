@@ -15,7 +15,7 @@
      <!-- Head Icon -->
      <link rel="icon" href="./image/logo.jpeg" type="image/x-icon">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="Css/inventory.css">
+    <link rel="stylesheet" href="Css/alert.css">
     <style>
         
         table {
@@ -88,13 +88,13 @@
       <aside id="sidebar">
         <div class="sidebar-title">
           <div class="external">
-          <div class="sidebar-brand">
-            <span class="material-icons-outlined">inventory</span> Admin Panel
-          </div>
+            <div class="sidebar-brand">
+              <span class="material-icons-outlined">inventory</span> Admin Panel
+            </div>
           </div>
           <span class="material-icons-outlined" onclick="closeSidebar()" id="openBar">close</span>
         </div>
-
+      
         <ul class="sidebar-list">
           <li class="sidebar-list-item-1">
             <a class="drop-link" href="index.html">
@@ -102,13 +102,16 @@
             </a>
           </li>
           <li class="sidebar-list-item-1">
-            <a class="drop-link" href="users.html">  <i class="fa-solid fa-user"></i> User Management</a></li>
+            <a class="drop-link" href="users.html"> <i class="fa-solid fa-user"></i> User Management</a>
           </li>
-          
-          <li class="sidebar-list-item-1">
+          <li class="sidebar-list-item-1 dropdown">
             <a class="drop-link" href="product.html">
               <span class="material-icons-outlined">inventory_2</span> Products
-            </a>
+            </a><i class="fa-solid fa-caret-down"></i>
+            <ul class="dropdown-list">
+              <li><a href="china.html"><i class="fa-solid fa-circle-dot"></i> China Plywood</a></li>
+              <li><a href="rongtai.html"><i class="fa-solid fa-circle-dot"></i> Rongtai Plywood</a></li>
+            </ul>
           </li>
           <li class="sidebar-list-item-1">
             <a class="drop-link" href="inventory.html">
@@ -130,7 +133,6 @@
               <span class="material-icons-outlined">poll</span> Inventory Alerts
             </a>
           </li>
-         
         </ul>
       </aside>
       <!-- End Sidebar -->
@@ -169,6 +171,17 @@
     <!-- Custom JS -->
     <script src="Js/inventory.js"></script>
     <!-- Internal Javascript -->
-    
+    <script>
+      document.querySelectorAll('.sidebar-list-item-1.dropdown').forEach(item => {
+  item.addEventListener('click', function(e) {
+    // Don't toggle if the link itself is clicked
+    if (e.target.tagName.toLowerCase() === 'a') return;
+
+    // Toggle the active class for the dropdown
+    this.classList.toggle('active');
+  });
+});
+
+     </script>
   </body>
 </html>
