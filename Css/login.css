@@ -26,7 +26,20 @@ input {
   top: 0;
   left: 0;
 }
-
+.eye-icon {
+  cursor: pointer;
+  position: relative;
+  left: 4rem;
+  bottom: 3.5rem;
+  left: 20rem;
+}
+.eye-icon2 {
+  cursor: pointer;
+  position: relative;
+  left: 4rem;
+  bottom: 3.5rem;
+  left: 20rem;
+}
 .signin-signup {
   position: absolute;
   top: 50%;
