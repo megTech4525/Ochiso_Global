@@ -121,654 +121,163 @@ select:hover {
       <!-- End Sidebar -->
         <!-- Product Table -->
         <main class="main-container">
-           <div class="product-container">
-            <!-- Add Products Section -->
-            <div class="add-container">
-              <div class="top-head-1">
-                <h3><i class="fa-solid fa-cart-plus"></i> Add Products</h3>
-               </div>
-               <div class="add-content">
-                <h4>Register New Product Here</h4>
-                 <button class="add-new" onclick="newProductOpen()">+ Add New Product</button>
-               </div>
-               <!-- Pop up for adding New product -->
-               <div class="pop">
-                <div class="newProduct-container">
-           <div class="addNew-popup" id="newProduct-popup">
-               <form action=""> 
-                <i class="fa-solid fa-xmark" onclick="newProductClose()"></i>
-                <h4 style="text-align: center;">New Product</h4>
-                 <input class="new-input" type="text"  placeholder="Product Name"><br><br>
-                 <input class="new-input" type="text" name="" id="" placeholder="Categories"><br><br>
-                 <select name="" id="" style="width: 65%;">
-                  <option value="white">Colours</option>
-                  <option value="white">WHITE</option>
-  <option value="offwhite">OFFWHITE</option>
-  <option value="akala">AKALA</option>
-  <option value="wenge">WENGE</option>
-  <option value="redrose">REDROSE</option>
-  <option value="mansonia">MANSONIA</option>
-  <option value="brown_mansonia">BROWN MANSONIA</option>
-  <option value="pink">PINK</option>
-  <option value="orange">ORANGE</option>
-  <option value="lemon">LEMON</option>
-  <option value="marble_cloud">MARBLE CLOUD</option>
-  <option value="marble_white">MARBLE WHITE</option>
-  <option value="black_marble_gold">BLACK MARBLE GOLD</option>
-  <option value="stripe_wenge">STRIPE WENGE</option>
-  <option value="pink_2">PINK</option>
-  <option value="grey">GREY</option>
-  <option value="dark_grey">DARK GREY</option>
-  <option value="red">RED</option>
-  <option value="cappuccino">CAPPUCCINO</option>
-  <option value="new_akala">NEW AKALA</option>
-  <option value="marble_stone">MARBLE STONE</option>
-  <option value="yellow_marble">YELLOW MARBLE</option>
-  <option value="stripe_ash">STRIPE ASH</option>
-  <option value="mipple">MIPPLE</option>
-  <option value="purple">PURPLE</option>
-  <option value="ceder">CEDER....E.T.C</option>
-  <option value="benin_code">BENIN CODE</option>
-                 </select><br><br>
-                 <input class="new-input" type="number" name="" id="" placeholder="Product Quantity"><br><br>
-                 <input class="new-input" type="number" name="" id="" placeholder="Cost Price"><br><br>
-                 <input class="new-input" type="number" name="" id="" placeholder="Selling Price"><br><br>
-                 <button class="ok-btn" type="button" onclick="newProductClose()">Add Product</button>
-               </form>
-           </div>
+          <h2 style="text-align: center;">Inventory List</h2>
+          <div class="product-container">
+             <!-- Add Products Section -->
+     <div class="add-container">
+       <div class="top-head-1">
+         <h3><i class="fa-solid fa-cart-plus"></i> Add Products</h3>
         </div>
-              </div>
-              <!-- POP UP SECTION ENDS -->
-            </div>
-           <!-- Main Product Table -->
-            <div class="main-product">
-             <div class="top-head-2">
-              <h3><i class="fa-solid fa-box-archive"></i> All Products</h3>
-              <div class="btn-container"><button class="add-new" onclick="updateProductOpen()">+ Update Product</button></div><br>
-             </div>
-              <!-- Pop up for Updating product -->
-              <div class="pop">
-                <div class="updateProduct-container">
-           <div class="update-popup" id="updateProduct-popup">
-               <form action=""> 
-                <i class="fa-solid fa-xmark" onclick="updateProductClose()"></i>
-                <h4 style="text-align: center; color: black;">Update Product</h4>
-                <select name="Product Name" id="updatedProduct2" style="width: 65%;">
-                  <option value="MDF-Wood">MDF Wood</option>
-                  <option value="HDF-Wood">HDF Wood</option>
-                  <option value="BB-Wood">BB Wood</option>
-                  <option value="Marine-Wood">Marine Wood</option>
-                  <option value="China-Plywood">China Plywood</option>
-                  <option value="Local-Plywood">Local Plywood</option>
-                  <option value="Fluted-Panels">Fluted Panels</option>
-                  <option value="Door-Skin">Door Skin</option>
-                  <option value="Particular-Wood">Particular Wood</option>
-                  <option value="Edges-Tape">Edges Tape</option>
-                  <option value="Rongtai-MDF">Rongtai MDF</option>
-                </select>
-                 <br><br>
-                 <input class="new-input" type="text" name="" id="" placeholder="Categories"><br><br>
-                 <select name="" id="" style="width: 65%;">
-                  <option value="white">Colours</option>
-                  <option value="white">WHITE</option>
-  <option value="offwhite">OFFWHITE</option>
-  <option value="akala">AKALA</option>
-  <option value="wenge">WENGE</option>
-  <option value="redrose">REDROSE</option>
-  <option value="mansonia">MANSONIA</option>
-  <option value="brown_mansonia">BROWN MANSONIA</option>
-  <option value="pink">PINK</option>
-  <option value="orange">ORANGE</option>
-  <option value="lemon">LEMON</option>
-  <option value="marble_cloud">MARBLE CLOUD</option>
-  <option value="marble_white">MARBLE WHITE</option>
-  <option value="black_marble_gold">BLACK MARBLE GOLD</option>
-  <option value="stripe_wenge">STRIPE WENGE</option>
-  <option value="pink_2">PINK</option>
-  <option value="grey">GREY</option>
-  <option value="dark_grey">DARK GREY</option>
-  <option value="red">RED</option>
-  <option value="cappuccino">CAPPUCCINO</option>
-  <option value="new_akala">NEW AKALA</option>
-  <option value="marble_stone">MARBLE STONE</option>
-  <option value="yellow_marble">YELLOW MARBLE</option>
-  <option value="stripe_ash">STRIPE ASH</option>
-  <option value="mipple">MIPPLE</option>
-  <option value="purple">PURPLE</option>
-  <option value="ceder">CEDER....E.T.C</option>
-  <option value="benin_code">BENIN CODE</option>
-                 </select><br><br>
-                 <input class="new-input" type="number" name="" id="" placeholder="Product Quantity"><br><br>
-                 <input class="new-input" type="number" name="" id="" placeholder="Cost Price"><br><br>
-                 <input class="new-input" type="number" name="" id="" placeholder="Selling Price"><br><br>
-                 <button class="ok-btn" type="button" onclick="updateProductClose()">Update Product</button>
-               </form>
-           </div>
+        <div class="add-content">
+         <h4>Register New Product Here</h4>
+          <button class="add-new" onclick="newProductOpen()">+ Add New Product</button>
         </div>
-              </div>
-              <!-- POP UP SECTION ENDS -->
-             <table border="1">
-              <thead>
-                <tr>
-                  <th>S/N</th>
-                  <th>Product Name</th>
-                  <th>Quantity</th>
-                  <th>In Stock</th>
+        <!-- Pop up for adding New product -->
+        <div class="pop">
+         <div class="newProduct-container">
+    <div class="addNew-popup" id="newProduct-popup">
+        <form action=""> 
+         <i class="fa-solid fa-xmark" onclick="newProductClose()"></i>
+         <h4 style="text-align: center;">New Product</h4>
+          <input class="new-input" type="text"  placeholder="Product Name"><br><br>
+          <input class="new-input" type="text" name="" id="" placeholder="Categories"><br><br>
+          <select name="" id="" style="width: 65%;">
+           <option value="white">Colours</option>
+           <option value="white">WHITE</option>
+<option value="offwhite">OFFWHITE</option>
+<option value="akala">AKALA</option>
+<option value="wenge">WENGE</option>
+<option value="redrose">REDROSE</option>
+<option value="mansonia">MANSONIA</option>
+<option value="brown_mansonia">BROWN MANSONIA</option>
+<option value="pink">PINK</option>
+<option value="orange">ORANGE</option>
+<option value="lemon">LEMON</option>
+<option value="marble_cloud">MARBLE CLOUD</option>
+<option value="marble_white">MARBLE WHITE</option>
+<option value="black_marble_gold">BLACK MARBLE GOLD</option>
+<option value="stripe_wenge">STRIPE WENGE</option>
+<option value="pink_2">PINK</option>
+<option value="grey">GREY</option>
+<option value="dark_grey">DARK GREY</option>
+<option value="red">RED</option>
+<option value="cappuccino">CAPPUCCINO</option>
+<option value="new_akala">NEW AKALA</option>
+<option value="marble_stone">MARBLE STONE</option>
+<option value="yellow_marble">YELLOW MARBLE</option>
+<option value="stripe_ash">STRIPE ASH</option>
+<option value="mipple">MIPPLE</option>
+<option value="purple">PURPLE</option>
+<option value="ceder">CEDER....E.T.C</option>
+<option value="benin_code">BENIN CODE</option>
+          </select><br><br>
+          <input class="new-input" type="number" name="" id="" placeholder="Product Quantity"><br><br>
+          <input class="new-input" type="number" name="" id="" placeholder="Cost Price"><br><br>
+          <input class="new-input" type="number" name="" id="" placeholder="Selling Price"><br><br>
+          <button class="ok-btn" type="button" onclick="newProductClose()">Add Product</button>
+        </form>
+    </div>
+ </div>
+       </div>
+       <!-- POP UP SECTION ENDS -->
+     </div>
+     <div class="add-container">
+      <div class="top-head-1">
+        <h3><i class="fa-solid fa-archive"></i> Update Products</h3>
+       </div>
+       <div class="add-content">
+        <h3><i class="fa-solid fa-box-archive"></i> Update Current Products</h3>
+  <div class="btn-container"><button class="add-new" onclick="updateProductOpen()">+ Update Product</button></div>
+       </div>
+       <!-- Pop up for adding New product -->
+       <div class="pop">
+        <div class="updateProduct-container">
+    <div class="update-popup" id="updateProduct-popup">
+       <form action=""> 
+        <i class="fa-solid fa-xmark" onclick="updateProductClose()"></i>
+        <h4 style="text-align: center; color: black;">Update Product</h4>
+        <select name="Product Name" id="updatedProduct2" style="width: 65%;">
+          <option value="MDF-Wood">MDF Wood</option>
+          <option value="HDF-Wood">HDF Wood</option>
+          <option value="BB-Wood">BB Wood</option>
+          <option value="Marine-Wood">Marine Wood</option>
+          <option value="China-Plywood">China Plywood</option>
+          <option value="Local-Plywood">Local Plywood</option>
+          <option value="Fluted-Panels">Fluted Panels</option>
+          <option value="Door-Skin">Door Skin</option>
+          <option value="Particular-Wood">Particular Wood</option>
+          <option value="Edges-Tape">Edges Tape</option>
+          <option value="Rongtai-MDF">Rongtai MDF</option>
+        </select>
+         <br><br>
+         <input class="new-input" type="text" name="" id="" placeholder="Categories"><br><br>
+         <select name="" id="" style="width: 65%;">
+          <option value="white">Colours</option>
+          <option value="white">WHITE</option>
+    <option value="offwhite">OFFWHITE</option>
+    <option value="akala">AKALA</option>
+    <option value="wenge">WENGE</option>
+    <option value="redrose">REDROSE</option>
+    <option value="mansonia">MANSONIA</option>
+    <option value="brown_mansonia">BROWN MANSONIA</option>
+    <option value="pink">PINK</option>
+    <option value="orange">ORANGE</option>
+    <option value="lemon">LEMON</option>
+    <option value="marble_cloud">MARBLE CLOUD</option>
+    <option value="marble_white">MARBLE WHITE</option>
+    <option value="black_marble_gold">BLACK MARBLE GOLD</option>
+    <option value="stripe_wenge">STRIPE WENGE</option>
+    <option value="pink_2">PINK</option>
+    <option value="grey">GREY</option>
+    <option value="dark_grey">DARK GREY</option>
+    <option value="red">RED</option>
+    <option value="cappuccino">CAPPUCCINO</option>
+    <option value="new_akala">NEW AKALA</option>
+    <option value="marble_stone">MARBLE STONE</option>
+    <option value="yellow_marble">YELLOW MARBLE</option>
+    <option value="stripe_ash">STRIPE ASH</option>
+    <option value="mipple">MIPPLE</option>
+    <option value="purple">PURPLE</option>
+    <option value="ceder">CEDER....E.T.C</option>
+    <option value="benin_code">BENIN CODE</option>
+         </select><br><br>
+         <input class="new-input" type="number" name="" id="" placeholder="Product Quantity"><br><br>
+         <input class="new-input" type="number" name="" id="" placeholder="Cost Price"><br><br>
+         <input class="new-input" type="number" name="" id="" placeholder="Selling Price"><br><br>
+         <button class="ok-btn" type="button" onclick="updateProductClose()">Update Product</button>
+       </form>
+    </div>
+    </div>
+      </div>
+      <!-- POP UP SECTION ENDS -->
+    </div>
+     <br><br>
+          </div>
+         <div class="table-section">
+          <!-- Inventory Table -->
+          <table border="1" id="myTable">
+            <thead id="myTableHead">
+              <tr>
+                <th>S/N</th>
+                <th>Product Name</th>
+                <th>Categories</th>
+                <th>Thickness</th>
+                <th>Colour</th>
+                <th>Quantity</th>
               </tr>
-              </thead>
-          <tbody>
-            <tr onclick="tableProductOpenOne()" class="main-tr">
-              <td>1.</td>
-              <td>MDF Wood</td>
-              <td>0</td>
-               <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenTwo()">
-              <td>2.</td>
-              <td>HDF Wood</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenThree()">
-              <td>3.</td>
-              <td>BB Wood</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenFour()">
-              <td>4.</td>
-              <td>Marine Wood</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenFive()">
-              <td>5.</td>
-              <td>China Plywood</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenSix()">
-              <td>6.</td>
-              <td>Local Plywood</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenSeven()">
-              <td>7.</td>
-              <td>Fluted Panels</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenEight()">
-              <td>8.</td>
-              <td>Door Skin</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenNine()">
-              <td>9.</td>
-              <td>Particular Wood</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock </td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenTen()">
-              <td>10.</td>
-              <td>Edges Tape</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          <tr class="main-tr" onclick="tableProductOpenEleven()">
-              <td>11.</td>
-              <td>Rongtai MDF</td>
-              <td>0</td>
-              <td class="edit-icon" style="color: red;">Out Of Stock</td>
-          </tr>
-          </tbody>
-             </table>
-             <!--Pop up Products Info Via Table-->
-              <!-- First Product -->
-              <div class="table-1-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-1" id="tableProduct-popup-1">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseOne()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">MDF Wood</td>
-                  <td contenteditable="true" data-table="Categories">1/2<br>(Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">24,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">30,000</td>
-                  <td contenteditable="true" data-table="Date Added">14-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">MDF Wood</td>
-                  <td contenteditable="true" data-table="Categories">1/4<br>(Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">34</td>
-                  <td contenteditable="true" data-table="Cost Price">24,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">30,000</td>
-                  <td contenteditable="true" data-table="Date Added">14-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">MDF Wood</td>
-                  <td contenteditable="true" data-table="Categories">3/4 <br>(Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">34</td>
-                  <td contenteditable="true" data-table="Cost Price">24,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">30,000</td>
-                  <td contenteditable="true" data-table="Date Added">14-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Second Product -->
-              <div class="table-2-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-2" id="tableProduct-popup-2">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseTwo()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">HDF Wood</td>
-                  <td contenteditable="true" data-table="Categories">1/4<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">2</td>
-                  <td contenteditable="true" data-table="Cost Price">21,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">26,000</td>
-                  <td contenteditable="true" data-table="Date Added">4-12-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">HDF Wood</td>
-                  <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">21,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">26,000</td>
-                  <td contenteditable="true" data-table="Date Added">4-12-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Third Product -->
-              <div class="table-3-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-3" id="tableProduct-popup-3">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseThree()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">BB Wood</td>
-                  <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">32</td>
-                  <td contenteditable="true" data-table="Cost Price">25,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">36,000</td>
-                  <td contenteditable="true" data-table="Date Added">1-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Fourth Product -->
-              <div class="table-4-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-4" id="tableProduct-popup-4">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseFour()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Marine Wood</td>
-                  <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">27</td>
-                  <td contenteditable="true" data-table="Cost Price">5,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">10,000</td>
-                  <td contenteditable="true" data-table="Date Added">11-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Fifth Product -->
-              <div class="table-5-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-5" id="tableProduct-popup-5">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseFive()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">China Plywood</td>
-                  <td contenteditable="true" data-table="Categories">1/2<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">15,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">26,000</td>
-                  <td contenteditable="true" data-table="Date Added">10-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">China Plywood</td>
-                  <td contenteditable="true" data-table="Categories">1/4<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">15,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">26,000</td>
-                  <td contenteditable="true" data-table="Date Added">10-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">China Plywood</td>
-                  <td contenteditable="true" data-table="Categories">1/8<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">1</td>
-                  <td contenteditable="true" data-table="Cost Price">15,000</td>
-                  <td contenteditable="true" data-table="Current Selling Price">26,000</td>
-                  <td contenteditable="true" data-table="Date Added">10-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Sixth Product -->
-              <div class="table-6-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-6" id="tableProduct-popup-6">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseSix()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Local Plywood</td>
-                  <td contenteditable="true" data-table="Categories">1/2<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">5,000</td>
-                  <td contenteditable="true" data-table="Current Selling">6,000</td>
-                  <td contenteditable="true" data-table="Date Added">10-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Local Plywood</td>
-                  <td contenteditable="true" data-table="Categories">1/4<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">5,000</td>
-                  <td contenteditable="true" data-table="Current Selling">6,000</td>
-                  <td contenteditable="true" data-table="Date Added">10-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Local Plywood</td>
-                  <td contenteditable="true" data-table="Categories">1/8<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">10</td>
-                  <td contenteditable="true" data-table="Cost Price">5,000</td>
-                  <td contenteditable="true" data-table="Current Selling">6,000</td>
-                  <td contenteditable="true" data-table="Date Added">10-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Seventh Product -->
-              <div class="table-7-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-7" id="tableProduct-popup-7">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseSeven()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Fluted Panels</td>
-                  <td contenteditable="true" data-table="Categories">(Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">80</td>
-                  <td contenteditable="true" data-table="Cost Price">35,000</td>
-                  <td contenteditable="true" data-table="Current Selling">40,000</td>
-                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Eight Product -->
-              <div class="table-8-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-8" id="tableProduct-popup-8">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseEight()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Door Skin</td>
-                  <td contenteditable="true" data-table="Categories">(Different Designs)</td>
-                  <td contenteditable="true" data-table="Quantity">24</td>
-                  <td contenteditable="true" data-table="Cost Price">17,500</td>
-                  <td contenteditable="true" data-table="Current Selling Price">20,000</td>
-                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Ninth Product -->
-              <div class="table-9-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-9" id="tableProduct-popup-9">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseNine()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Particular Wood</td>
-                  <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">4</td>
-                  <td contenteditable="true" data-table="Cost Price">11,200</td>
-                  <td contenteditable="true" data-table="Current Selling Price">12,500</td>
-                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Tenth Product -->
-              <div class="table-10-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-10" id="tableProduct-popup-10">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseTen()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Edges Tape</td>
-                  <td contenteditable="true" data-table="Categories">1/2<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">15,200</td>
-                  <td contenteditable="true" data-table="Current Selling Price">17,500</td>
-                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Edges Tape</td>
-                  <td contenteditable="true" data-table="Categories">1/4<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">15,200</td>
-                  <td contenteditable="true" data-table="Current Selling Price">17,500</td>
-                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Edges Tape</td>
-                  <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">15,200</td>
-                  <td contenteditable="true" data-table="Current Selling Price">17,500</td>
-                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- Eleventh Product -->
-              <div class="table-11-pop">
-                <div class="tableProduct-container">
-           <div class="tableProduct-popup-11" id="tableProduct-popup-11">
-            <i class="fa-solid fa-xmark" onclick="tableProductCloseEleven()" style="color: black;"></i>
-            <h2>Product Information</h2>
-            <button class="trash-btn">Delete Product <i class="fa-solid fa-trash"></i></button>
-            <table border="1" id="myTable">
-              <thead id="myTableHead">
-                <tr>
-                  <th>Product Name</th>
-                  <th>Categories</th>
-                  <th>Quantity</th>
-                  <th>Cost Price</th>
-                  <th>Current Selling Price</th>
-                  <th>Date Added</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Rongtai MDF</td>
-                  <td contenteditable="true" data-table="Categories">1/2<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">15,200</td>
-                  <td contenteditable="true" data-table="Current Selling Price">17,500</td>
-                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Rongtai MDF</td>
-                  <td contenteditable="true" data-table="Categories">1/4<br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">15,200</td>
-                  <td contenteditable="true" data-table="Current Selling Price">17,500</td>
-                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
-                </tr>
-                <tr>
-                  <td contenteditable="true" data-table="Product Name">Rongtai MDF</td>
-                  <td contenteditable="true" data-table="Categories">3/4 <br> (Different Colours)</td>
-                  <td contenteditable="true" data-table="Quantity">0</td>
-                  <td contenteditable="true" data-table="Cost Price">15,200</td>
-                  <td contenteditable="true" data-table="Current Selling Price">17,500</td>
-                  <td contenteditable="true" data-table="Date Added">9-2-2025</td>
-                </tr>
-              </tbody>
-            </table>
-           </div>
-        </div>
-              </div>
-              <!-- POP UP SECTION ENDS -->
-            </div>
-           </div>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-table="S/N">1.</td>
+                <td data-table="Product Name"><span style="color: red;">No Current Inventory</span></td>
+                <td data-table="Categories"><span style="color: red;">No Current Inventory</span></td>
+                <td data-table="Thickness"><span style="color: red;">No Current Inventory</span></td>
+                <td data-table="Colour"><span style="color: red;">No Current Inventory</span></td>
+                <td data-table="Quantity"><span style="color: red;">No Current Inventory</span></td>
+              </tr>
+            </tbody>
+          </table>
+         </div>
       </main>
     </div>
     
@@ -798,96 +307,6 @@ select:hover {
     updateProduct.classList.remove("newProduct-openpopup")
  };
 
-//  Table Info Pop up
-// Number 1
-let tableProduct1 = document.getElementById("tableProduct-popup-1");
- function tableProductOpenOne() {
-    tableProduct1.classList.add("productOne");
- }
- function tableProductCloseOne() {
-    tableProduct1.classList.remove("productOne")
- };
- // Number 2
-let tableProduct2 = document.getElementById("tableProduct-popup-2");
- function tableProductOpenTwo() {
-    tableProduct2.classList.add("productTwo");
- }
- function tableProductCloseTwo() {
-    tableProduct2.classList.remove("productTwo")
- };
-  // Number 3
-let tableProduct3 = document.getElementById("tableProduct-popup-3");
- function tableProductOpenThree() {
-    tableProduct3.classList.add("productThree");
- }
- function tableProductCloseThree() {
-    tableProduct3.classList.remove("productThree")
- };
-  // Number 4
-let tableProduct4 = document.getElementById("tableProduct-popup-4");
- function tableProductOpenFour() {
-    tableProduct4.classList.add("productFour");
- }
- function tableProductCloseFour() {
-    tableProduct4.classList.remove("productFour")
- };
-  // Number 5
-let tableProduct5 = document.getElementById("tableProduct-popup-5");
- function tableProductOpenFive() {
-    tableProduct5.classList.add("productFive");
- }
- function tableProductCloseFive() {
-    tableProduct5.classList.remove("productFive")
- };
-   // Number 6
-let tableProduct6 = document.getElementById("tableProduct-popup-6");
- function tableProductOpenSix() {
-    tableProduct6.classList.add("productSix");
- }
- function tableProductCloseSix() {
-    tableProduct6.classList.remove("productSix")
- };
-   // Number 7
-let tableProduct7 = document.getElementById("tableProduct-popup-7");
- function tableProductOpenSeven() {
-    tableProduct7.classList.add("productSeven");
- }
- function tableProductCloseSeven() {
-    tableProduct7.classList.remove("productSeven")
- };
-   // Number 8
-let tableProduct8 = document.getElementById("tableProduct-popup-8");
- function tableProductOpenEight() {
-    tableProduct8.classList.add("productEight");
- }
- function tableProductCloseEight() {
-    tableProduct8.classList.remove("productEight")
- };
-   // Number 9
-let tableProduct9 = document.getElementById("tableProduct-popup-9");
- function tableProductOpenNine() {
-    tableProduct9.classList.add("productNine");
- }
- function tableProductCloseNine() {
-    tableProduct9.classList.remove("productNine")
- };
-   // Number 10
-let tableProduct10 = document.getElementById("tableProduct-popup-10");
- function tableProductOpenTen() {
-    tableProduct10.classList.add("productTen");
- }
- function tableProductCloseTen() {
-    tableProduct10.classList.remove("productTen")
- };
-   // Number 11
-let tableProduct11 = document.getElementById("tableProduct-popup-11");
- function tableProductOpenEleven() {
-    tableProduct11.classList.add("productEleven");
- }
- function tableProductCloseEleven() {
-    tableProduct11.classList.remove("productEleven")
- };
-//  Local Storage For Pop Up Editing
 
 
 // Product Link Toggle

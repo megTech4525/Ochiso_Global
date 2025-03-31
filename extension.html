@@ -1,958 +1,160 @@
-<div class="main-table">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with Two Dropdowns</title>
+    <style>
+        /* Style the button */
+        .dropdown-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
 
-    <h3 style="text-align: center;">MDF BOARDS</h3>
-    
-    <div class="table-container-1">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-table="S/N">1.</td>
-                    <td data-table="Product Name">MDF Board</td>
-                    <td data-table="Categories">1/4</td>
-                    <td data-table="Available Lenght">(3mm)</td>
-                    <td data-table="Date Added">2025-03-20</td>
-                    <td data-table="Action"><button class="dropdown-btn" onclick="toggleDropdown(0)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-0" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenght</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-table="Available Lenght" class="nest-td">3mm</td>
-                                    <td data-table="Available Quantity" class="nest-td">24</td>
-                                    <td data-table="Colours" class="nest-td">Blue</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(0)">Hide Info</button>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>2.</td>
-                    <td>MDF Board</td>
-                    <td>1/2</td>
-                    <td>(8mm)</td>
-                    <td>2025-03-22</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(1)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-1" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <h3>Additional Information</h3>
-                            <thead>
-                                <tr>
-                                    <th>Available Lenght</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colour</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>8mm</td>
-                                    <td>15</td>
-                                    <td>Caramel</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(1)">Hide Info</button>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>3</td>
-                    <td>MDF Board</td>
-                    <td>3/4</td>
-                    <td>(15mm/16mm/18mm)</td>
-                    <td>2025-03-15</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(2)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-2" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <tr>
-                                    <th>Available Length</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colour</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15mm</td>
-                                    <td>10</td>
-                                    <td>Black, Brown</td>
-                                </tr>
-                                <tr>
-                                    <td>16mm</td>
-                                    <td>6</td>
-                                    <td>Brown, Plain Colour</td>
-                                </tr>
-                                <tr>
-                                    <td>18mm</td>
-                                    <td>12</td>
-                                    <td>Grey, White</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(2)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
+        /* Dropdown container (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Style for the links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Position dropdowns */
+        .dropdown1 {
+            left: 0;
+        }
+
+        .dropdown2 {
+            left: 200px; /* Adjust this as needed */
+        }
+
+        /* For mobile devices, ensure dropdowns appear properly */
+        @media (max-width: 768px) {
+            .dropdown-content {
+                position: relative;
+                left: 0; /* Make dropdowns appear directly below the button */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dropdown-container">
+        <button class="dropdown-button">Products</button>
+        <div class="dropdown-content dropdown1">
+            <a href="#">Product 1A</a>
+            <a href="#">Product 1B</a>
+            <a href="#">Product 1C</a>
+        </div>
     </div>
-    
-    <h3 style="text-align: center;">HIGH GLOSSY MDF BOARDS</h3>
-    
-    <div class="table-container-2">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>High Glossy MDF Board</td>
-                    <td>3/4</td>
-                    <td>(15mm,16mm,18mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(4)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-4" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenghts</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15mm</td>
-                                    <td>30</td>
-                                    <td>Blue</td>
-                                </tr>
-                                <tr>
-                                    <td>16mm</td>
-                                    <td>24</td>
-                                    <td>Red, Brown</td>
-                                </tr>
-                                <tr>
-                                    <td>18mm</td>
-                                    <td>22</td>
-                                    <td>Brown, Red</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(4)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    <h3 style="text-align: center;">HDF BOARDS</h3>
-    
-    <div class="table-container-3">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>HDF Board</td>
-                    <td>1/4</td>
-                    <td>(3mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(5)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-5" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenghts</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>3mm</td>
-                                    <td>40</td>
-                                    <td>Brown, Red, Blue</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(5)">Hide Info</button>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>2.</td>
-                    <td>HDF Board</td>
-                    <td>1/2</td>
-                    <td>(8mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(6)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-6" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenghts</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>8mm</td>
-                                    <td>21</td>
-                                    <td>Brown, Red, Blue</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(6)">Hide Info</button>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>3.</td>
-                    <td>HDF Board</td>
-                    <td>3/4</td>
-                    <td>(15mm,16mm,18mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(7)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-7" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenghts</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15mm</td>
-                                    <td>7</td>
-                                    <td>Brown, Red, Blue</td>
-                                </tr>
-                                <tr>
-                                    <td>16mm</td>
-                                    <td>22</td>
-                                    <td>Brown, Red, Blue</td>
-                                </tr>
-                                <tr>
-                                    <td>18mm</td>
-                                    <td>50</td>
-                                    <td>Brown, Red, Blue</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(7)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    <h3 style="text-align: center;">HIGH GLOSSY HDF BOARDS</h3>
-    
-    <div class="table-container-4">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>High Glossy HDF Board</td>
-                    <td>3/4</td>
-                    <td>(15mm,16mm,18mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(8)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-8" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenghts</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15mm</td>
-                                    <td>10</td>
-                                    <td>Blue</td>
-                                </tr>
-                                <tr>
-                                    <td>16mm</td>
-                                    <td>20</td>
-                                    <td>Red, Brown</td>
-                                </tr>
-                                <tr>
-                                    <td>18mm</td>
-                                    <td>20</td>
-                                    <td>Brown, Red</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(8)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    <h3 style="text-align: center;">BLOCK BOARDS</h3>
-    
-    <div class="table-container-5">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>Block Board</td>
-                    <td>3/4</td>
-                    <td>(15mm,16mm,18mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(9)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-9" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenghts</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15mm</td>
-                                    <td>12</td>
-                                    <td>Blue</td>
-                                </tr>
-                                <tr>
-                                    <td>16mm</td>
-                                    <td>30</td>
-                                    <td>Red, Brown</td>
-                                </tr>
-                                <tr>
-                                    <td>18mm</td>
-                                    <td>34</td>
-                                    <td>Brown, Red</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(9)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    <h3 style="text-align: center;">MARINE BOARDS</h3>
-    
-    <div class="table-container-6">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>Marine Board</td>
-                    <td>3/4</td>
-                    <td>(15mm,16mm,18mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(10)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-10" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenghts</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15mm</td>
-                                    <td>20</td>
-                                    <td>Blue</td>
-                                </tr>
-                                <tr>
-                                    <td>16mm</td>
-                                    <td>5</td>
-                                    <td>Red, Brown</td>
-                                </tr>
-                                <tr>
-                                    <td>18mm</td>
-                                    <td>15</td>
-                                    <td>Brown, Red</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(10)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    <h3 style="text-align: center;">PARTICLE BOARDS</h3>
-    
-    <div class="table-container-7">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>Particle Board</td>
-                    <td>3/4</td>
-                    <td>(15mm,16mm,18mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(11)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-11" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenghts</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15mm</td>
-                                    <td>20</td>
-                                    <td>Blue</td>
-                                </tr>
-                                <tr>
-                                    <td>16mm</td>
-                                    <td>15</td>
-                                    <td>Red, Brown</td>
-                                </tr>
-                                <tr>
-                                    <td>18mm</td>
-                                    <td>20</td>
-                                    <td>Brown, Red</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(11)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    
-    <h3 style="text-align: center;">COMMERCIAL PLYWOOD</h3>
-    
-    <div class="table-container-8">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>Commercial Plywood</td>
-                    <td>1/8</td>
-                    <td>(3mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(12)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-12" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Length</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>(3mm)</td>
-                                    <td>50</td>
-                                    <td>Blue, Brown, Black</td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(12)">Hide Info</button>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>2.</td>
-                    <td>Commercial Plywood</td>
-                    <td>1/4</td>
-                    <td>(3mm)</td>
-                    <td>2025-03-22</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(13)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-13" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <h3>Additional Information</h3>
-                            <thead>
-                                <tr>
-                                    <th>Available Length</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colour</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>(3mm)</td>
-                                    <td>12</td>
-                                    <td>Caramel</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(13)">Hide Info</button>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>3.</td>
-                    <td>Commercial Plywood</td>
-                    <td>1/2</td>
-                    <td>(8mm)</td>
-                    <td>2025-03-15</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(14)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-14" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <tr>
-                                    <th>Available Length</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colour</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>8mm</td>
-                                    <td>3</td>
-                                    <td>Black, Brown</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(14)">Hide Info</button>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>4.</td>
-                    <td>Commercial Plywood</td>
-                    <td>3/4</td>
-                    <td>(15mm,16mm,18mm)</td>
-                    <td>2025-03-15</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(15)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-15" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <tr>
-                                    <th>Available Length</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colour</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15mm</td>
-                                    <td>45</td>
-                                    <td>Black, Brown</td>
-                                </tr>
-                                <tr>
-                                    <td>16mm</td>
-                                    <td>25</td>
-                                    <td>Blue, Red, Brown</td>
-                                </tr>
-                                <tr>
-                                    <td>18mm</td>
-                                    <td>10</td>
-                                    <td>Plain, Brown</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(14)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    <h3 style="text-align: center;">DOOR SKIN</h3>
-    
-    <div class="table-container-9">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>Door Skin</td>
-                    <td>NIL</td>
-                    <td>(3mm)</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(16)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-16" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Lenghts</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>3mm</td>
-                                    <td>20</td>
-                                    <td>Blue</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(16)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    <h3 style="text-align: center;">FLUTED PANEL</h3>
-    
-    <div class="table-container-9">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>Fluted Panel</td>
-                    <td>NIL</td>
-                    <td>NIL</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(17)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-17" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>30</td>
-                                    <td>Blue</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(17)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    <h3 style="text-align: center;">GLOSSY EDGE TAPE</h3>
-    
-    <div class="table-container-10">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>Glossy Edge Tape</td>
-                    <td>Light</td>
-                    <td>0.5mm</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(18)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-18" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Length</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>0.5mm</td>
-                                    <td>30</td>
-                                    <td>Blue,Brown</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(18)">Hide Info</button>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>2.</td>
-                    <td>Glossy Edge Tape</td>
-                    <td>Thick</td>
-                    <td>1.0mm</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(19)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-19" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Length</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1.0mm</td>
-                                    <td>30</td>
-                                    <td>Blue,Brown</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(19)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>
-    
-    <h3 style="text-align: center;">MAT EDGE TAPE</h3>
-    
-    <div class="table-container-10">
-        <table>
-            <thead>
-                <tr>
-                    <th>S/N</th>
-                    <th>Product Name</th>
-                    <th>Categories</th>
-                    <th>Available Length</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1.</td>
-                    <td>Mat Edge Tape</td>
-                    <td>Light</td>
-                    <td>0.5mm</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(20)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-20" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Length</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>0.5mm</td>
-                                    <td>30</td>
-                                    <td>Blue,Brown</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(20)">Hide Info</button>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>2.</td>
-                    <td>Mat Edge Tape</td>
-                    <td>Thick</td>
-                    <td>1.0mm</td>
-                    <td>2025-03-20</td>
-                    <td><button class="dropdown-btn" onclick="toggleDropdown(21)">Show Info</button></td>
-                </tr>
-                <tr id="dropdown-content-21" class="dropdown-content">
-                    <td colspan="7">
-                        <table class="nested-table">
-                            <thead>
-                                <h3>Additional Information</h3>
-                                <tr>
-                                    <th>Available Length</th>
-                                    <th>Available Quantity</th>
-                                    <th>Colours</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1.0mm</td>
-                                    <td>30</td>
-                                    <td>Blue,Brown</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="hide-btn" onclick="toggleDropdown(21)">Hide Info</button>
-                    </td>
-                </tr>
-    
-            </tbody>
-        </table>
-    </div>          
-    </div>
+
+    <script>
+        // When the button is clicked, toggle the visibility of both dropdowns
+        document.querySelector('.dropdown-button').addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent the click event from closing the dropdown immediately
+            let dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(function(dropdown) {
+                // Toggle display between block and none
+                dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+
+        // Close the dropdowns if the user clicks anywhere outside
+        window.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                let dropdowns = document.querySelectorAll('.dropdown-content');
+                dropdowns.forEach(function(dropdown) {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+<div class="pop">
+    <div class="updateProduct-container">
+<div class="update-popup" id="updateProduct-popup">
+   <form action=""> 
+    <i class="fa-solid fa-xmark" onclick="updateProductClose()"></i>
+    <h4 style="text-align: center; color: black;">Update Product</h4>
+    <select name="Product Name" id="updatedProduct2" style="width: 65%;">
+      <option value="MDF-Wood">MDF Wood</option>
+      <option value="HDF-Wood">HDF Wood</option>
+      <option value="BB-Wood">BB Wood</option>
+      <option value="Marine-Wood">Marine Wood</option>
+      <option value="China-Plywood">China Plywood</option>
+      <option value="Local-Plywood">Local Plywood</option>
+      <option value="Fluted-Panels">Fluted Panels</option>
+      <option value="Door-Skin">Door Skin</option>
+      <option value="Particular-Wood">Particular Wood</option>
+      <option value="Edges-Tape">Edges Tape</option>
+      <option value="Rongtai-MDF">Rongtai MDF</option>
+    </select>
+     <br><br>
+     <input class="new-input" type="text" name="" id="" placeholder="Categories"><br><br>
+     <select name="" id="" style="width: 65%;">
+      <option value="white">Colours</option>
+      <option value="white">WHITE</option>
+<option value="offwhite">OFFWHITE</option>
+<option value="akala">AKALA</option>
+<option value="wenge">WENGE</option>
+<option value="redrose">REDROSE</option>
+<option value="mansonia">MANSONIA</option>
+<option value="brown_mansonia">BROWN MANSONIA</option>
+<option value="pink">PINK</option>
+<option value="orange">ORANGE</option>
+<option value="lemon">LEMON</option>
+<option value="marble_cloud">MARBLE CLOUD</option>
+<option value="marble_white">MARBLE WHITE</option>
+<option value="black_marble_gold">BLACK MARBLE GOLD</option>
+<option value="stripe_wenge">STRIPE WENGE</option>
+<option value="pink_2">PINK</option>
+<option value="grey">GREY</option>
+<option value="dark_grey">DARK GREY</option>
+<option value="red">RED</option>
+<option value="cappuccino">CAPPUCCINO</option>
+<option value="new_akala">NEW AKALA</option>
+<option value="marble_stone">MARBLE STONE</option>
+<option value="yellow_marble">YELLOW MARBLE</option>
+<option value="stripe_ash">STRIPE ASH</option>
+<option value="mipple">MIPPLE</option>
+<option value="purple">PURPLE</option>
+<option value="ceder">CEDER....E.T.C</option>
+<option value="benin_code">BENIN CODE</option>
+     </select><br><br>
+     <input class="new-input" type="number" name="" id="" placeholder="Product Quantity"><br><br>
+     <input class="new-input" type="number" name="" id="" placeholder="Cost Price"><br><br>
+     <input class="new-input" type="number" name="" id="" placeholder="Selling Price"><br><br>
+     <button class="ok-btn" type="button" onclick="updateProductClose()">Update Product</button>
+   </form>
+</div>
+</div>
+  </div>
+
+  <h3><i class="fa-solid fa-box-archive"></i> All Products</h3>
+  <div class="btn-container"><button class="add-new" onclick="updateProductOpen()">+ Update Product</button></div><br>
