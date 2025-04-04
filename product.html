@@ -139,9 +139,15 @@ select:hover {
         <form action=""> 
          <i class="fa-solid fa-xmark" onclick="newProductClose()"></i>
          <h4 style="text-align: center;">New Product</h4>
-          <input class="new-input" type="text"  placeholder="Product Name"><br><br>
-          <input class="new-input" type="text" name="" id="" placeholder="Categories"><br><br>
-          <select name="" id="" style="width: 65%;">
+         <select name="" id="specification" style="width: 65%;">
+          <option value="IMPORTED/LOCAL">IMPORTED/LOCAL</option>
+          <option value="CHINA IMPORTED">CHINA IMPORTED</option>
+          <option value="RONGTAI">RONGTAI</option>
+         </select>
+          <input class="new-input" type="text" id="product-name" placeholder="Product Name"><br><br>
+          <input class="new-input" type="text" name="" id="categories" placeholder="Categories"><br><br>
+          <input class="new-input" type="text" name="" id="thickness" placeholder="Thickness"><br><br>
+          <select name="colors" id="colors" style="width: 65%;">
            <option value="white">Colours</option>
            <option value="white">WHITE</option>
 <option value="offwhite">OFFWHITE</option>
@@ -168,12 +174,12 @@ select:hover {
 <option value="stripe_ash">STRIPE ASH</option>
 <option value="mipple">MIPPLE</option>
 <option value="purple">PURPLE</option>
-<option value="ceder">CEDER....E.T.C</option>
+<option value="ceder">CEDER</option>
 <option value="benin_code">BENIN CODE</option>
           </select><br><br>
-          <input class="new-input" type="number" name="" id="" placeholder="Product Quantity"><br><br>
-          <input class="new-input" type="number" name="" id="" placeholder="Cost Price"><br><br>
-          <input class="new-input" type="number" name="" id="" placeholder="Selling Price"><br><br>
+          <input class="new-input" type="number" name="product-quantity" id="product-quantity" placeholder="Product Quantity"><br><br>
+          <input class="new-input" type="number" name="" id="cost-price" placeholder="Cost Price"><br><br>
+          <input class="new-input" type="number" name="" id="selling-price" placeholder="Selling Price"><br><br>
           <button class="ok-btn" type="button" onclick="newProductClose()">Add Product</button>
         </form>
     </div>
@@ -196,22 +202,15 @@ select:hover {
        <form action=""> 
         <i class="fa-solid fa-xmark" onclick="updateProductClose()"></i>
         <h4 style="text-align: center; color: black;">Update Product</h4>
-        <select name="Product Name" id="updatedProduct2" style="width: 65%;">
-          <option value="MDF-Wood">MDF Wood</option>
-          <option value="HDF-Wood">HDF Wood</option>
-          <option value="BB-Wood">BB Wood</option>
-          <option value="Marine-Wood">Marine Wood</option>
-          <option value="China-Plywood">China Plywood</option>
-          <option value="Local-Plywood">Local Plywood</option>
-          <option value="Fluted-Panels">Fluted Panels</option>
-          <option value="Door-Skin">Door Skin</option>
-          <option value="Particular-Wood">Particular Wood</option>
-          <option value="Edges-Tape">Edges Tape</option>
-          <option value="Rongtai-MDF">Rongtai MDF</option>
-        </select>
-         <br><br>
-         <input class="new-input" type="text" name="" id="" placeholder="Categories"><br><br>
-         <select name="" id="" style="width: 65%;">
+        <select name="" id="Uspecification" style="width: 65%;">
+          <option value="IMPORTED/LOCAL">IMPORTED/LOCAL</option>
+          <option value="CHINA IMPORTED">CHINA IMPORTED</option>
+          <option value="RONGTAI">RONGTAI</option>
+         </select><br><br>
+        <input class="new-input" type="text" name="" id="Uproduct-name" placeholder="Product-name">
+        <br><br>
+         <input class="new-input" type="text" name="" id="Ucategories" placeholder="Categories"><br><br>
+         <select name="" id="Ucolors" style="width: 65%;">
           <option value="white">Colours</option>
           <option value="white">WHITE</option>
     <option value="offwhite">OFFWHITE</option>
@@ -238,13 +237,13 @@ select:hover {
     <option value="stripe_ash">STRIPE ASH</option>
     <option value="mipple">MIPPLE</option>
     <option value="purple">PURPLE</option>
-    <option value="ceder">CEDER....E.T.C</option>
+    <option value="ceder">CEDER</option>
     <option value="benin_code">BENIN CODE</option>
          </select><br><br>
-         <input class="new-input" type="number" name="" id="" placeholder="Product Quantity"><br><br>
-         <input class="new-input" type="number" name="" id="" placeholder="Cost Price"><br><br>
-         <input class="new-input" type="number" name="" id="" placeholder="Selling Price"><br><br>
-         <button class="ok-btn" type="button" onclick="updateProductClose()">Update Product</button>
+         <input class="new-input" type="number" name="" id="Uproduct-quantity" placeholder="Product Quantity"><br><br>
+         <input class="new-input" type="number" name="" id="Ucost-price" placeholder="Cost Price"><br><br>
+         <input class="new-input" type="number" name="" id="Uselling-price" placeholder="Selling Price"><br><br>
+         <button class="ok-btn" id="update-btn"type="button" onclick="updateProductClose()">Update Product</button>
        </form>
     </div>
     </div>
@@ -255,8 +254,13 @@ select:hover {
           </div>
          <div class="table-section">
           <!-- Inventory Table -->
-          <table border="1" id="myTable">
+          <!-- <table border="1" id="myTable"> -->
+
+            <!-- HERE MIGHT NEED A MEDIA QUERY -->
+
+            <table border="1" id="chinaTable">
             <thead id="myTableHead">
+              <h3>China Imported Products</h3>
               <tr>
                 <th>S/N</th>
                 <th>Product Name</th>
@@ -264,29 +268,48 @@ select:hover {
                 <th>Thickness</th>
                 <th>Colour</th>
                 <th>Quantity</th>
+                <th>In Stock</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td data-table="S/N">1.</td>
-                <td data-table="Product Name"><span style="color: red;">No Current Inventory</span></td>
-                <td data-table="Categories"><span style="color: red;">No Current Inventory</span></td>
-                <td data-table="Thickness"><span style="color: red;">No Current Inventory</span></td>
-                <td data-table="Colour"><span style="color: red;">No Current Inventory</span></td>
-                <td data-table="Quantity"><span style="color: red;">No Current Inventory</span></td>
-              </tr>
+            <!-- <tbody> -->
+              
+    <tbody id="chinaProducts">
+        <tr><td colspan="6" style="text-align:center;">NO DATA ENTERED</td></tr>
+    </tbody>
+</table>
+
+<h3>Rongtai Products</h3>
+<table border="1" id="rongtaiTable">
+    <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Product Name</th>
+            <th>Categories</th>
+            <th>Thickness</th>
+            <th>Colour</th>
+            <th>Quantity</th>
+            <th>In Stock</th>
+        </tr>
+    </thead>
+    <tbody id="rongtaiProducts">
+        <tr><td colspan="6" style="text-align:center;">NO DATA ENTERED</td></tr>
+    </tbody>
+</table>
+
             </tbody>
           </table>
          </div>
       </main>
     </div>
     
+    <!-- TILL THIS PLACE -->
 
     <!-- Scripts -->
     <!-- ApexCharts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
     <!-- Custom JS -->
     <script src="Js/product.js"></script>
+    <script type="module" src="Js/sales.js"></script>
     <!-- Internal Javascript -->
     <script>
       // Pop Up for Adding New Product

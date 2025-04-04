@@ -113,32 +113,61 @@
           </div><br><br>
          <div class="table-section">
           <!-- Inventory Table -->
-          <table border="1" id="myTable">
-            <thead id="myTableHead">
-              <tr>
-                <th>S/N</th>
-                <th>Product Name</th>
-                <th>Categories</th>
-                <th>Quantity</th>
-                <th>Cost Price</th>
-                <th>Selling Price</th>
-                <th>Date Added</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-table="S/N">1.</td>
-                <td data-table="Product Name"><span style="color: red;">No Current Inventory</span></td>
-                <td data-table="Categories"><span style="color: red;">No Current Inventory</span></td>
-                <td data-table="Quantity"><span style="color: red;">No Current Inventory</span></td>
-                <td data-table="Cost Price"><span style="color: red;">No Current Inventory</span></td>
-                <td data-table="Selling Price"><span style="color: red;">No Current Inventory</span></td>
-                <td data-table="Date Added"><span style="color: red;">No Current Inventory</span></td>
-              </tr>
-            </tbody>
-          </table>
-         </div>
-      </main>
+           <!-- Product Table -->
+        <main class="main-container">
+          <h3 style="text-align: center;">Inventory Alerts</h3>
+          <div class="table-section">
+            <table border="1" id="alert-chinaTable">
+              <thead id="myTableHead">
+                <h3>China Imported Products</h3>
+                <tr>
+                  <th>S/N</th>
+                  <th>Product Name</th>
+                  <th>Categories</th>
+                  <th>Thickness</th>
+                  <th>Colour</th>
+                  <th>Quantity</th>
+                  <th>Cost Price</th>
+                  <th>Selling Price</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  
+                  
+                </tr>
+              </thead>
+              <!-- <tbody> -->
+                
+      <tbody id="inventory-chinaProducts">
+          <tr><td colspan="10" style="text-align:center;">NO DATA ENTERED</td></tr>
+      </tbody>
+  </table>       
+        
+
+  <!-- RONGTAI PRODUCTS -->
+   
+<h3>Rongtai Products</h3>
+<table border="1" id="alert-rongtaiTable">
+    <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Product Name</th>
+            <th>Categories</th>
+            <th>Thickness</th>
+            <th>Colour</th>
+            <th>Quantity</th>
+            <th>Cost Price</th>
+            <th>Selling Price</th>
+            <th>Status</th>
+            <th>Date</th>
+            
+            
+        </tr>
+    </thead>
+    <tbody id="inventory-rongtaiProducts">
+        <tr><td colspan="10" style="text-align:center;">NO DATA ENTERED</td></tr>
+    </tbody>
+</table>
+        </main>
     </div>
     
 

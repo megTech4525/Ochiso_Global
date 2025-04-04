@@ -1,3 +1,37 @@
+
+// Function to update the total quantity on the product page and update the dashboard
+function updateTotalQuantity() {
+  let products = JSON.parse(localStorage.getItem("products")) || [];
+
+  let totalQuantity = products.reduce((total, product) => total + (parseInt(product.quantity) || 0), 0); // Sum of all quantities
+
+  // Update the total in the dashboard section
+  document.getElementById("allProducts").textContent = totalQuantity.toLocaleString()
+    + ' ' + "BOARDS IN TOTAL STOCK";
+
+
+  const LOW_STOCK_THRESHOLD = 1000;
+  // Count products that have low stock
+  let lowStockCount = products.filter(product => parseInt(product.quantity) < LOW_STOCK_THRESHOLD);
+
+  // Update the low stock display on the dashboard
+  let lowStockDisplay = document.getElementById("inventoryAlert");
+  if (lowStockDisplay) {
+      lowStockDisplay.textContent = lowStockCount.length;
+  }
+ 
+};
+
+  // // Optionally, store the total in localStorage for persistence
+  // localStorage.setItem("totalQuantity", totalQuantity);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateTotalQuantity()
+});
+
+
+
 // SIDEBAR TOGGLE
 
 let sidebarOpen = false;

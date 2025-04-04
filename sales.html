@@ -114,28 +114,60 @@
   <div class="modal-content">
       <span id="closeModal" class="close">&times;</span>
       <h2 style="text-align: center; font-size: 22px;">China Plywood Stock Out</h2>
-      <form id="stockOutForm">
+      <form id="stockOutForm1">
           <div class="inputs">
             <label for="product">Product Name:</label>
-          <input type="text" class="stock-input" id="product" name="product" required>
-          </div>
+          <input type="text" class="stock-input" id="stock-out-product" name="product" required>
+          
+        </div>
           <div class="inputs">
             <label for="categories">Categories Sold:</label>
-          <input type="text" class="stock-input" id="categories" name="categories" required>
+          <input type="text" class="stock-input" id="stock-out-categories" name="categories" required>
           </div>
           <div class="inputs">
             <label for="color">Colour Sold:</label>
-          <input type="text" class="stock-input" id="color" name="color" required>
-          </div>
+          
+          <select class="stock-input" id="stock-out-color" name="color" style="width: 105%;">
+            <option value="white">Colours</option>
+            <option value="white">WHITE</option>
+      <option value="offwhite">OFFWHITE</option>
+      <option value="akala">AKALA</option>
+      <option value="wenge">WENGE</option>
+      <option value="redrose">REDROSE</option>
+      <option value="mansonia">MANSONIA</option>
+      <option value="brown_mansonia">BROWN MANSONIA</option>
+      <option value="pink">PINK</option>
+      <option value="orange">ORANGE</option>
+      <option value="lemon">LEMON</option>
+      <option value="marble_cloud">MARBLE CLOUD</option>
+      <option value="marble_white">MARBLE WHITE</option>
+      <option value="black_marble_gold">BLACK MARBLE GOLD</option>
+      <option value="stripe_wenge">STRIPE WENGE</option>
+      <option value="pink_2">PINK</option>
+      <option value="grey">GREY</option>
+      <option value="dark_grey">DARK GREY</option>
+      <option value="red">RED</option>
+      <option value="cappuccino">CAPPUCCINO</option>
+      <option value="new_akala">NEW AKALA</option>
+      <option value="marble_stone">MARBLE STONE</option>
+      <option value="yellow_marble">YELLOW MARBLE</option>
+      <option value="stripe_ash">STRIPE ASH</option>
+      <option value="mipple">MIPPLE</option>
+      <option value="purple">PURPLE</option>
+      <option value="ceder">CEDER</option>
+      <option value="benin_code">BENIN CODE</option>
+             </select>
+        </div>
+          
           <div class="inputs">
             <label for="thickness">Thickness Sold:</label>
-          <input type="text" class="stock-input" id="thickness" name="thickness" required>
+          <input type="text" class="stock-input" id="stock-out-thickness" name="thickness" required>
           </div>
           <div class="inputs">
             <label for="quantity">Quantity Sold:</label>
-          <input type="number" class="stock-input" id="quantity" name="quantity" required>
+          <input type="number" class="stock-input" id="stock-out-quantity" name="quantity" required>
           </div><br>
-          <button class="submit" type="submit">Stock Out</button>
+          <button class="submit" id="stock-out-china-btn"type="submit">Stock Out</button>
       </form>
   </div>
 </div>
@@ -146,51 +178,100 @@
       <form id="stockOutForm">
           <div class="inputs">
             <label for="product">Product Name:</label>
-          <input type="text" class="stock-input" id="product" name="product" required>
+          <input type="text" class="stock-input" id="Rongtai-stock-out-product" name="product" required>
           </div>
           <div class="inputs">
             <label for="categories">Categories Sold:</label>
-          <input type="text" class="stock-input" id="categories" name="categories" required>
-          </div>
+            <input type="text" class="stock-input" id="Rongtai-stock-out-categories" name="categories" required>
+            </div>
           <div class="inputs">
             <label for="color">Colour Sold:</label>
-          <input type="text" class="stock-input" id="color" name="color" required>
-          </div>
+          <select class="stock-input" id="Rongtai-stock-out-color" name="categories" style="width: 100%;">
+            <option value="white">Colours</option>
+            <option value="white">WHITE</option>
+ <option value="offwhite">OFFWHITE</option>
+ <option value="akala">AKALA</option>
+ <option value="wenge">WENGE</option>
+ <option value="redrose">REDROSE</option>
+ <option value="mansonia">MANSONIA</option>
+ <option value="brown_mansonia">BROWN MANSONIA</option>
+ <option value="pink">PINK</option>
+ <option value="orange">ORANGE</option>
+ <option value="lemon">LEMON</option>
+ <option value="marble_cloud">MARBLE CLOUD</option>
+ <option value="marble_white">MARBLE WHITE</option>
+ <option value="black_marble_gold">BLACK MARBLE GOLD</option>
+ <option value="stripe_wenge">STRIPE WENGE</option>
+ <option value="pink_2">PINK</option>
+ <option value="grey">GREY</option>
+ <option value="dark_grey">DARK GREY</option>
+ <option value="red">RED</option>
+ <option value="cappuccino">CAPPUCCINO</option>
+ <option value="new_akala">NEW AKALA</option>
+ <option value="marble_stone">MARBLE STONE</option>
+ <option value="yellow_marble">YELLOW MARBLE</option>
+ <option value="stripe_ash">STRIPE ASH</option>
+ <option value="mipple">MIPPLE</option>
+ <option value="purple">PURPLE</option>
+ <option value="ceder">CEDER</option>
+ <option value="benin_code">BENIN CODE</option>
+           </select>
+             
+        </div>
+          
           <div class="inputs">
             <label for="thickness">Thickness Sold:</label>
-          <input type="text" class="stock-input" id="thickness" name="thickness" required>
+          <input type="text" class="stock-input" id="Rongtai-stock-out-thickness" name="thickness" required>
           </div>
           <div class="inputs">
             <label for="quantity">Quantity Sold:</label>
-          <input type="number" class="stock-input" id="quantity" name="quantity" required>
+          <input type="number" class="stock-input" id="Rongtai-stock-out-quantity" name="quantity" required>
           </div><br>
-          <button class="submit" type="submit">Stock Out</button>
+          <button class="submit1" id="stock-out-rongtai-btn"type="submit">Stock Out</button>
       </form>
   </div>
 </div><br><br>
          <div class="table-section">
-          <table border="1" id="myTable">
+          <table border="1" id="stock-out-chinaTable">
             <thead id="myTableHead">
+              <h3>China Imported Products</h3>
               <tr>
                 <th>S/N</th>
                 <th>Product Name</th>
                 <th>Categories</th>
-                <th>Sold Quantity</th>
-                <th>Selling Price</th>
-                <th>Date Added</th>
+                <th>Thickness</th>
+                <th>Colour</th>
+                <th>Quantity</th>
+                <th>Date</th>
+                
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td data-table="S/N">1.</td>
-                <td data-table="Product Name"><span style="color: red;">Empty Stock</span></td>
-                <td data-table="Categories"><span style="color: red;">Empty Stock</span></td>
-                <td data-table="Sold Quantity"><span style="color: red;">Empty Stock</span></td>
-                <td data-table="Selling Price"><span style="color: red;">Empty Stock</span></td>
-                <td data-table="Date Added"><span style="color: red;">Empty Stock</span></td>
-              </tr>
-            </tbody>
-          </table>
+            <!-- <tbody> -->
+              
+    <tbody id="stock-out-chinaProducts">
+        <tr><td colspan="6" style="text-align:center;">NO DATA ENTERED</td></tr>
+    </tbody>
+</table>
+
+<h3>Rongtai Products</h3>
+<table border="1" id="stock-out-rongtaiTable">
+    <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Product Name</th>
+            <th>Categories</th>
+            <th>Thickness</th>
+            <th>Colour</th>
+            <th>Quantity</th>
+            <th>Date</th>
+            
+        </tr>
+    </thead>
+    <tbody id="stock-out-rongtaiProducts">
+        <tr><td colspan="6" style="text-align:center;">NO DATA ENTERED</td></tr>
+    </tbody>
+</table>
+
          </div>
       </main>
     </div>
@@ -201,6 +282,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
     <!-- Custom JS -->
     <script src="Js/sales.js"></script>
+    <script type="module" src="Js/product.js"></script>
     <!-- Internal Javascript -->
     <script>
         document.querySelectorAll('.sidebar-list-item-1.dropdown').forEach(item => {
